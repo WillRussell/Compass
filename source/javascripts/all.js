@@ -12,14 +12,14 @@ $(function() {
         url: "https://peaceful-sea-4129.herokuapp.com/api/v1/search.json",
         data: { address : input_address },
         success: function(data) {
+            var numLegislators =data["legislators"].length;
             var profile = data;
-            $(".legislators").append(JSON.stringify(profile["legislators"][0]["firstname"])) +
-            $(".legislators").append(JSON.stringify(profile["legislators"][0]["lastname"]));
+                for (var i = 0; i < numLegislators; i++) {
+                    $(".legislators").append(JSON.stringify(profile["legislators"][i]["firstname"])) +
+                    $(".legislators").append(JSON.stringify(profile["legislators"][i]["lastname"]));
+                }
             }
         });
     });
 });
-
-
-
 
