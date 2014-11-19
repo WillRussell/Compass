@@ -1,4 +1,5 @@
 //= require jquery/dist/jquery
+
 //= require foundation/js/foundation.min
 
 //= require app
@@ -14,8 +15,8 @@ $(function() {
         success: function(data) {
             var numLegislators =data["legislators"].length;
                 for (var i = 0; i < numLegislators; i++) {
-                    var firstname = JSON.stringify(data["legislators"][i]["firstname"]);
-                    var lastname = JSON.stringify(data["legislators"][i]["lastname"]);
+                    var firstname = JSON.stringify(data["legislators"][i]["firstname"]).slice(1, -1);
+                    var lastname = JSON.stringify(data["legislators"][i]["lastname"]).slice(1, -1);
                     $(".legislators").append("<li>" + firstname + " " + lastname + "</li>");
                 }
             }
