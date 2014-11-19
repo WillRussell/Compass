@@ -13,13 +13,12 @@ $(function() {
         data: { address : input_address },
         success: function(data) {
             var numLegislators =data["legislators"].length;
-            var profile = data;
                 for (var i = 0; i < numLegislators; i++) {
-                    $(".legislators").append(JSON.stringify(profile["legislators"][i]["firstname"])) +
-                    $(".legislators").append(JSON.stringify(profile["legislators"][i]["lastname"]));
+                    var firstname = JSON.stringify(data["legislators"][i]["firstname"]);
+                    var lastname = JSON.stringify(data["legislators"][i]["lastname"]);
+                    $(".legislators").append("<li>" + firstname + " " + lastname + "</li>");
                 }
             }
         });
     });
 });
-
