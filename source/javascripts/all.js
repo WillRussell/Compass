@@ -17,9 +17,12 @@ $(function() {
                 for (var i = 0; i < numLegislators; i++) {
                     var firstname = JSON.stringify(data["legislators"][i]["firstname"]).slice(1, -1);
                     var lastname = JSON.stringify(data["legislators"][i]["lastname"]).slice(1, -1);
-                    $(".legislators").append("<li>" + firstname + " " + lastname + "</li>");
+                    $( "#legislator-list" ).append( '<li><a href="#">' + firstname + " " + lastname + '</a></li>');
                 }
             }
         });
+         $('.panel').fadeToggle(200);
     });
 });
+
+

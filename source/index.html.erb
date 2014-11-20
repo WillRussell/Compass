@@ -1,34 +1,47 @@
 <nav class="top-bar" data-topbar role="navigation">
-
-
-
   <ul class="title-area">
     <li class="name">
       <h1><a href="#" class="compass">Compass</a></h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
-
   <section class="top-bar-section">
-    <!-- Right Nav Section -->
     <ul class="right">
+
+      <li class="divider"></li>
+      <li class="has-dropdown">
+        <a href="#">Funding</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+        </ul>
+      </li>
+      <li class="divider"></li>
+      <li class="has-dropdown">
+        <a href="#">Legislators</a>
+        <ul class="dropdown" id="legislator-list">
+        </ul>
+      </li>
+      <li class="divider"></li>
+
+
       <li class="has-form">
         <div class="row collapse">
           <div class="large-8 small-9 columns">
-              <form action="http://requestb.in/t9jg5xt9"  method="get">
+            <form action="http://requestb.in/t9jg5xt9"  method="get">
               <input type="text" name="address" id="address" placeholder="Enter your address">
+            </div>
+            <div class="large-4 small-3 columns">
+              <a href="#" class="right button active success"id="location-button">Submit</a>
+            </form>
           </div>
-          <div class="large-4 small-3 columns">
-              <a href="#" class="right button active success" id="location-button">Submit</a>
-          </div>
-          </form>
-        </div>
-      </li>
-    </ul>
-  </section>
-</nav>
+        </li>
+      </ul>
+    </section>
+  </nav>
 
-
-<ul>
-  <li><div class="legislators"></div></li>
-</ul>
+  <div class="panel">
+    <h5>This panel should be hidden and expand onclick.</h5>
+      <ul>
+        <li><div id="legislator-list"></div></li>
+        </ul>
+  </div>
