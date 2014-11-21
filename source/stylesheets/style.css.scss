@@ -1,16 +1,30 @@
-body{
+/*body{
     background-image: url(images/green_texture.png);
-};
+};*/
 
 .top-bar {
       opacity: 0.9;
 };
 
 .panel {
+    opacity: 0.8;
+}
+
+.panel {
     display:none
 };
+
+
 
 ul {
     list-style-type: none;
 };
 
+li {
+    display: inline;
+}
+
+img {
+    height: 100px;
+    width: auto;
+}

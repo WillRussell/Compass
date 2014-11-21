@@ -18,16 +18,18 @@ $(function() {
                     var firstname = JSON.stringify(data["legislators"][i]["firstname"]).slice(1, -1);
                     var lastname = JSON.stringify(data["legislators"][i]["lastname"]).slice(1, -1);
                     var party = JSON.stringify(data["legislators"][i]["party"]).slice(1, -1);
-                    $( ".legislator-list" ).append( '<li><a href="#"  class="legis-select">' + firstname + " " + lastname + " " + "(" + party + ")" + '</a></li>');
+                    var picture = JSON.stringify(data["legislators"][i]["picture_url"]);
+                    $( ".legislator-list" ).append( '<li><a href="#"  class="legis-select">' + firstname + " " +
+                    lastname + " " + "(" + party + ")" + " " + "<img src=" + picture + '</a></li>');
                 }
             }
         });
-         $('.panel').fadeIn(500);
+         $('.panel').fadeIn(700);
     });
 });
 
-// $(function() {
-//     $(".legis-select").on('click', function () {
-//         $('.panel').hide();
-//     });
-// });
+$(function() {
+    $(".legis-select").on('click', function () {
+        $('.panel').hide();
+    });
+});
