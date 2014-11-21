@@ -17,12 +17,17 @@ $(function() {
                 for (var i = 0; i < numLegislators; i++) {
                     var firstname = JSON.stringify(data["legislators"][i]["firstname"]).slice(1, -1);
                     var lastname = JSON.stringify(data["legislators"][i]["lastname"]).slice(1, -1);
-                    $( "#legislator-list" ).append( '<li><a href="#">' + firstname + " " + lastname + '</a></li>');
+                    var party = JSON.stringify(data["legislators"][i]["party"]).slice(1, -1);
+                    $( ".legislator-list" ).append( '<li><a href="#"  class="legis-select">' + firstname + " " + lastname + " " + "(" + party + ")" + '</a></li>');
                 }
             }
         });
-         $('.panel').fadeToggle(200);
+         $('.panel').fadeIn(500);
     });
 });
 
-
+// $(function() {
+//     $(".legis-select").on('click', function () {
+//         $('.panel').hide();
+//     });
+// });
