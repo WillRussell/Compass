@@ -1,49 +1,76 @@
-
-<div class="container">
-<nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">
-      <h1><a href="#" class="compass">Compass</a></h1>
-    </li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="right">
-
-      <li class="divider"></li>
-      <li class="has-dropdown">
-        <a href="#">Funding</a>
-        <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
-        </ul>
+<!-- Navigation -->
+<div class="fixed">
+  <nav class="top-bar data-topbar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#" id="logo"> COMPASS</a></h1>
       </li>
-      <li class="divider"></li>
-      <li class="has-dropdown">
-        <a href="#">Legislators</a>
-        <ul class="dropdown" class ="legislator-list">
-        </ul>
-      </li>
-      <li class="divider"></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+    </ul>
 
-
-      <li class="has-form">
-        <div class="row collapse">
-          <div class="large-8 small-9 columns">
-            <form action="http://requestb.in/t9jg5xt9"  method="get">
-              <input type="text" name="address" id="address" placeholder="Enter your address">
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="has-form">
+          <div class="row collapse">
+            <div class="large-8 small-9 columns">
+              <form action="http://requestb.in/t9jg5xt9"  method="get">
+                <input type="text" name="address" id="address" placeholder="Enter your address">
+              </div>
+              <div class="large-4 small-3 columns">
+                <a href="#" class="right button radius active success" id="location-button"><i class="fa fa-search"></i></a>
+              </form>
             </div>
-            <div class="large-4 small-3 columns">
-              <a href="#" class="right button active success"id="location-button">Submit</a>
-            </form>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </nav>
+          </li>
+        </ul>
+      </section>
+    </nav>
 
-  <div class="panel">
-      <ul>
-          <li><div class="legislator-list"></div></li>
+<!-- End Navigation -->
+
+    <div class="panel">
+      <ul class="row">
+        <div class="legislator-list" id="legis-select"></div>
       </ul>
+    </div>
   </div>
-</div>
+
+  <section class="module parallax parallax-1">
+    <div class="container">
+      <a name="one"></a>
+      <h1 data-magellan-destination="section-one">Section 1</h1>
+    </div>
+  </section>
+
+
+  <section class="module parallax parallax-2">
+    <div class="container">
+      <a name="two"></a>
+      <h1 data-magellan-destination="section-two">Section 2</h1>
+    </div>
+  </section>
+
+
+  <section class="module parallax parallax-3">
+    <div class="container">
+      <a name="three"></a>
+      <h1 data-magellan-destination="section-three">Section 3</h1>
+    </div>
+  </section>
+
+  <section class="module parallax parallax-4">
+    <div class="container">
+      <a name="four"></a>
+      <h1 data-magellan-destination="section-four">Section 4</h1>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+        <h4>Footer Content</h4>
+      </div>
+    </div>
+  </footer>
+

@@ -18,3 +18,5 @@ end
 gem 'simple_form'
 
 gem "jquery-middleman"
+
+gem 'font-awesome-sass'

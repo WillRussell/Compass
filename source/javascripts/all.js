@@ -7,6 +7,10 @@
 
 $(function() {
     $('#location-button').on('click', function () {
+
+
+
+
         var input_address = $('#address').val();
         $.ajax({
         type: "GET",
@@ -19,17 +23,20 @@ $(function() {
                     var lastname = JSON.stringify(data["legislators"][i]["lastname"]).slice(1, -1);
                     var party = JSON.stringify(data["legislators"][i]["party"]).slice(1, -1);
                     var picture = JSON.stringify(data["legislators"][i]["picture_url"]);
-                    $( ".legislator-list" ).append( '<li><a href="#"  class="legis-select">' + firstname + " " +
-                    lastname + " " + "(" + party + ")" + " " + "<img src=" + picture + '</a></li>');
+                    $( ".legislator-list" ).append( '<div class="small-4 columns"><li><a href="#"  id="legis-select">' + "<img src=" + picture + ">"  + "</li>" +  '<li>' +firstname + " " +
+                    lastname + " " + "(" + party + ")"  +  '</a></li></div>');
                 }
             }
         });
-         $('.panel').fadeIn(700);
+         $('.panel').slideDown(400);
     });
 });
 
-$(function() {
-    $(".legis-select").on('click', function () {
-        $('.panel').hide();
+
+$(function () {
+ $("#legis-select").on('click', function () {
+        $('.panel').slideUp(400);
     });
 });
+
+
