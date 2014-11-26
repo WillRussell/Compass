@@ -1,8 +1,67 @@
+.contain-to-grid {
+  transition: background 0.5s ease;
+  background:rgba(255,255,255,0.5);
 
+  &.undocked {
+    transition: background 0.5s ease;
+    background:rgba(155,179,191, .5);
+  }
+}
+
+.top-bar {
+  background:transparent;
+
+  transition: padding-top 0.5s ease;
+  padding-top:20px;
+
+  transition: height 0.5s ease;
+  height:96px;
+  .name h1 a {
+    transition: color 0.5s ease;
+    color:rgba(0, 0, 0, 1);
+  }
+}
+.undocked .top-bar {
+  transition: height 0.5s ease;
+  height:66px;
+  transition: padding-top 0.5s ease;
+  padding-top:10px;
+  .name h1 a {
+    transition: color 0.5s ease;
+    color:rgba(252, 252, 252, 1);
+  }
+}
+
+.top-bar-section li a:not(.button) {
+  background:transparent;
+}
+.undocked .top-bar-section li:not(.has-form) a:not(.button) {
+  background:transparent;
+}
+
+.top-bar-section ul li {
+  background:transparent;
+  & > a {
+    transition: color 0.5s ease;
+    color:rgba(0, 0, 0, 1);
+  }
+}
+.undocked .top-bar-section ul li {
+  background:transparent;
+  & > a {
+    transition: background 0.5s ease;
+    color:rgba(252, 252, 252, 1);
+  }
+}
 
 .top-bar {
       opacity: 0.9;
 };
+
+.tab-bar {
+  background: none;
+}
+
 
 .panel {
     opacity: 0.9;
@@ -36,20 +95,12 @@ img {
   PRIMARY STRUCTURE
 ============================================================ */
 .container {
-  max-width: 960px;
-  margin: 0 auto;
+/*  max-width: 960px;
+*/  margin: 0 auto;
 }
 /* ============================================================
   SECTIONS
 ============================================================ */
-section.module:last-child {
-  margin-bottom: 0;
-}
-section.module h2 {
-  margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
-  font-size: 30px;
-}
 
 section.module.parallax {
   height: 600px;
@@ -59,13 +110,13 @@ section.module.parallax {
   background-size: cover;
 }
 section.module.parallax h1 {
-  color: rgba(255, 255, 255, 0.8);
+/*  color: rgba(255, 255, 255, 0.8);
   font-size: 48px;
   line-height: 600px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);*/
 }
 section.module.parallax-1 {
   background-image: url("images/redox_01.png");
@@ -82,9 +133,6 @@ section.module.parallax-4 {
 }
 
 @media all and (min-width: 600px) {
-  section.module h2 {
-    font-size: 42px;
-  }
   section.module.parallax h1 {
     font-size: 96px;
   }

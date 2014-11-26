@@ -1,6 +1,7 @@
 <!-- Navigation -->
-<div class="fixed">
-  <nav class="top-bar data-topbar">
+<!-- <div class="row">
+ -->  <div class="contain-to-grid fixed">
+  <nav class="top-bar data-topbar" role="navigation">
     <ul class="title-area">
       <li class="name">
         <h1><a href="#" id="logo"> COMPASS</a></h1>
@@ -13,21 +14,21 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class="has-form">
-          <div class="row collapse">
-            <div class="large-8 small-9 columns">
+        <li>
+          <div class="row collapse ">
+            <div class="large-8 small-9 columns ">
               <form action="http://requestb.in/t9jg5xt9"  method="get">
-                <input type="text" name="address" id="address" placeholder="Enter your address">
+                <input  type="text"  name="address" id="address" placeholder="Enter your address">
               </div>
               <div class="large-4 small-3 columns">
-                <a href="#" class="right button radius active success" id="location-button"><i class="fa fa-search"></i></a>
+                <a href="#" class="right button radius active" id="location-button"><i class="fa fa-search"></i></a>
               </form>
             </div>
           </li>
         </ul>
 
 <div class="left">
-  <dl id="magellanTopNav" class="tab-bar sub-nav" data-magellan-expedition>
+  <dl class="tab-bar sub-nav" data-magellan-expedition>
   <dd data-magellan-arrival="section-one"><a href="#one">Section 1</a></dd>
   <dd data-magellan-arrival="section-two"><a href="#two">Section 2</a></dd>
   <dd data-magellan-arrival="section-three"><a href="#three">Section 3</a></dd>
@@ -36,27 +37,25 @@
 </dl>
 </div>
 </section>
-
-    </nav>
+</nav>
 
 <div class="panel">
       <ul class="row">
-        <div class="legislator-list" id="legis-select"></div>
+        <div class="legislator-list"  id="legis-select" data-id></div>
       </ul>
     </div>
   </div>
 
-
-
   <section class="module parallax parallax-1">
     <div class="container">
       <a name="one"></a>
-      <h1 data-magellan-destination="section-one">Section 1</h1>
-    </div>
+<!--       <h1 data-magellan-destination="section-one">Section 1</h1>
+ -->
+
+ <div class="legislator-profile">
+
+ </div>
   </section>
-
-
-
 
   <section class="module parallax parallax-2">
     <div class="container">
@@ -80,7 +79,6 @@
     </div>
   </section>
 
-
   <footer>
     <div class="row">
       <div class="small-12 medium-12 large-12 columns">
@@ -89,3 +87,12 @@
     </div>
   </footer>
 
+
+<!-- <script type="text/template" id="profile">
+
+            <h2><%%= party %></h2>
+            <img src="<%%= picture_url %>">
+            <p> <%%= bioguyide_id %></p>
+            <p ><%%= twitter_id %></p>
+
+  </script> -->
