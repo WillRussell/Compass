@@ -20,3 +20,9 @@ gem 'simple_form'
 gem "jquery-middleman"
 
 gem 'font-awesome-sass'
+
+gem 'rack-contrib'
+
+group :development do
+  gem 'unicorn'
+end
