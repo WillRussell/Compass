@@ -48,12 +48,13 @@
 
 <div class="panel">
       <ul class="row">
-        <div class="legislator-list"  id="legis-select" data-id></div>
+        <div class="legislator-list"  id="legis-select"></div>
       </ul>
     </div>
   </div>
 
-  <section class="module parallax parallax-1">
+<!-- <div class="row">
+ -->  <section class="module parallax parallax-1">
     <div class="container">
       <a name="one"></a>
       <h1 data-magellan-destination="section-one"></h1>
@@ -63,24 +64,33 @@
 <br>
 <br>
 
-<div class="large-6 columns">
-    <div class="legislator-profile">
-    </div>
+<div class="yo large-6 columns">
+    <div class="legislator-profile" id="profile"></div>
 </div>
 
 
 <div class="large-6 columns">
-    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-    </div>
+      <div id="chart-one"></div>
+</div>
 </div>
 
 
   </section>
+  </div>
+
 
   <section class="module parallax parallax-2">
     <div class="container">
       <a name="two"></a>
-      <h1 data-magellan-destination="section-two">Section 2</h1>
+      <h1 data-magellan-destination="section-two"></h1>
+
+<div class="large-12 columns">
+<br>
+<br>
+<br>
+  <div id="container"></div>
+</div>
+
     </div>
   </section>
 
@@ -108,11 +118,11 @@
   </footer>
 
 
-<!-- <script type="text/template" id="profile">
+<script type="text/template" id="profile">
 
             <h2><%%= party %></h2>
             <img src="<%%= picture_url %>">
             <p> <%%= bioguide_id %></p>
             <p ><%%= twitter_id %></p>
 
-  </script> -->
+  </script>
