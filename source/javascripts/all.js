@@ -87,12 +87,11 @@ $(function () {
                     url: "http://peaceful-sea-4129.herokuapp.com/api/v1/elections_timeline.json",
                     data: { lastname: lastname,
                        state: state,
-                       title: title},
-
-                        success: function(data) {
-                            var elections_timeline_array = JSON.stringify(data["legislators"][0]["elections_timeline_array"]).slice(1, -1);
-                            console.log(elections_timeline_array);
-                        }
+                       title: title,
+                   },
+                    success: function(data) {
+                        timeline_function (data)
+                    }
                 })
             }
         })
