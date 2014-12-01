@@ -1,11 +1,24 @@
-
 <!-- Navigation -->
 <!-- <div class="row">
- -->  <div class="contain-to-grid grid fixed">
-  <nav class="top-bar data-topbar" role="navigation">
+ -->
+
+ <div class="contain-to-grid grid fixed">
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+    <aside class="right-off-canvas-menu">
+        <!-- whatever you want goes here -->
+        <ul>
+          <li><a href="#">Item 1</a></li>
+        ...
+        </ul>
+    </aside>
+
+ <nav class="top-bar data-topbar" role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#" id="logo"> COMPASS</a></h1>
+        <h1><a href="#"  id="logo"> COMPASS</a></h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
     </ul>
@@ -24,14 +37,12 @@
               <div class="large-4 small-3 columns">
                 <a href="#" class="right button radius active" id="location-button"><i class="fa fa-search"></i></a>
               </form>
+                </div>
             </div>
           </li>
         </ul>
 
-<!--               <section class="right-small">
-        <a class="toggle-top-bar menu-icon item right-off-canvas-toggle" href="#"><span></span></a>
-      </section>
- -->
+
 
 <div class="left">
   <dl class="tab-bar sub-nav" data-magellan-expedition>
@@ -39,6 +50,7 @@
     <dd data-magellan-arrival="section-two"><a href="#two">Funding</a></dd>
     <dd data-magellan-arrival="section-three"><a href="#three">Voting</a></dd>
     <dd data-magellan-arrival="section-four"><a href="#four">Methodology</a></dd>
+    <dd ><a class="right-off-canvas-toggle" href="#" >(canvas-toggle)</a></dd>
 </dl>
 </div>
 </section>
@@ -50,6 +62,11 @@
       </ul>
     </div>
   </div>
+
+
+    </div>
+</div>
+
 
 <!-- <div class="row">
  -->  <section class="module parallax parallax-1">
@@ -72,10 +89,10 @@
       <div id="chart-one"></div>
 </div>
 </div>
+</section>
 
 
-  </section>
-  </div>
+
 
 
   <section class="module parallax parallax-2">
@@ -88,49 +105,46 @@
 <br>
 <br>
 
-  <dl class="tabs right" data-tab>
-      <dd class="active"><a href="#panel1">Tab 1</a></dd>
-      <dd><a href="#panel2">Tab 2</a></dd>
-      <dd><a href="#panel3">Tab 3</a></dd>
-</dl>
-
-<div class="tabs-content">
-
-    <div class="content active" id="panel1">
-        <div id="container"></div>
+ <ul class="example-orbit-content" data-orbit>
+  <li data-orbit-slide="headline-1">
+    <div>
+              <div id="container"></div>
     </div>
+  </li>
+  <li data-orbit-slide="headline-2">
+    <div>
+              <div id="slider-two"></div>
 
-    <div class="content" id="panel2">
-        <div id="slider-two"></div>
     </div>
-
-    <div class="content" id="panel3">
-        <div id="slider-three"></div>
+  </li>
+  <li data-orbit-slide="headline-3">
+    <div>
+              <div id="slider-three"></div>
     </div>
-
-</div>
-
-
+  </li>
+</ul>
   </section>
-</div>
+
 
   <section class="module parallax parallax-3">
     <div class="container">
       <a name="three"></a>
-<!--       <h1 data-magellan-destination="section-three">Section 3</h1>
- -->
-
-
+      <h1 data-magellan-destination="section-three">Section 3</h1>
   </section>
 
   <section class="module parallax parallax-4">
     <div class="container">
       <a name="four"></a>
-      <h1 data-magellan-destination="section-four">Section 4</h1>
-    </div>
+<!--       <h1 data-magellan-destination="section-four">Section 4</h1>
+ -->
+ </div>
   </section>
 
-  <footer>
+</div>
+
+</div>
+
+<!--   <footer>
     <div class="row">
       <div class="small-12 medium-12 large-12 columns">
         <h4>Footer Content</h4>
@@ -146,4 +160,4 @@
             <p> <%%= bioguide_id %></p>
             <p ><%%= twitter_id %></p>
 
-  </script>
+  </script> -->
