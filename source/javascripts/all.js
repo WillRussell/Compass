@@ -81,10 +81,26 @@ $(function () {
                   +'<li><i class="fa fa-home fa-lg"></i> ' + website + '</li></ul>');
 
                 $("#thumbnail").attr('src',picture_url);
+
+                $.ajax({
+                    type: "GET",
+                    url: "http://peaceful-sea-4129.herokuapp.com/api/v1/elections_timeline.json",
+                    data: { lastname: lastname,
+                       state: state,
+                       title: title},
+
+                        success: function(data) {
+                            var elections_timeline_array = JSON.stringify(data["legislators"][0]["elections_timeline_array"]).slice(1, -1);
+                            console.log(elections_timeline_array);
+                        }
+                })
             }
         })
     });
 });
+
+
+
 
 // Highcharts funding influence graph for section 1
 // $(function () {
@@ -388,7 +404,7 @@ $(function () {
             }
         },
         title: {
-            text: 'Contents of Highsoft\'s weekly fruit delivery'
+            text: 'Funding by Type'
         },
         subtitle: {
             text: '3D donut in Highcharts'
@@ -428,7 +444,7 @@ $(function () {
         },
 
         title: {
-            text: 'Highcharts bubbles with radial gradient fill'
+            text: 'Funding by Sector'
         },
 
         xAxis: {
@@ -496,6 +512,10 @@ $(function () {
 
     });
 });
+
+
+
+
 
 
 
