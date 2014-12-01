@@ -18,7 +18,7 @@ jQuery(document).on("scroll",function(){
 
 // ---Legislators select slidedown panel ---
 $(function() {
-    $('#location-button').on('click', function () {
+    $('.search-button').on('click', function () {
 
         var input_address = $('#address').val();
         $.ajax({
@@ -26,6 +26,7 @@ $(function() {
         url: "https://peaceful-sea-4129.herokuapp.com/api/v1/search.json",
         data: { address : input_address },
         success: function(data) {
+            $( ".legislator-list" ).empty();
             var numLegislators =data["legislators"].length;
                 for (var i = 0; i < numLegislators; i++) {
                     var firstname = JSON.stringify(data["legislators"][i]["firstname"]).slice(1, -1);
@@ -57,7 +58,7 @@ $(function () {
                        title: title},
 
             success: function(data) {
-                    console.log(data);
+                    $(".legislator-profile").empty();
 
                     var twitter_id = JSON.stringify(data["legislators"][0]["twitter_id"]).slice(1, -1);
                     var influence_rank = JSON.stringify(data["legislators"][0]["influence_rank"]);
@@ -78,6 +79,8 @@ $(function () {
                  //  + '<p>Influence rank: '+influence_rank + '</p>'
                   +'<li><i class="fa fa-phone fa-lg"></i> ' + phone + '</li>'
                   +'<li><i class="fa fa-home fa-lg"></i> ' + website + '</li></ul>');
+
+                $("#thumbnail").attr('src',picture_url);
             }
         })
     });

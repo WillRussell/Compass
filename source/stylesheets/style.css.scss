@@ -2,7 +2,7 @@
   border-radius: 5px;
 }
 
-#location-button {
+.search-button {
   border-radius: 10px;
 }
 
@@ -115,6 +115,15 @@ img {
   height: 150px;
   width: auto;
   border-radius: 75px;
+}
+
+#thumbnail {
+  height: 40px;
+  width: auto;
+}
+
+#thumbnail-link {
+  background: transparent;
 }
 
 .profile-list {
