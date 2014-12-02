@@ -1,80 +1,84 @@
 // Highcharts js graph for section 2 pt. 3
-$(function () {
-    $('#slider-three').highcharts({
 
-        chart: {
-            type: 'bubble',
-            backgroundColor: 'transparent',
-            plotBorderWidth: 1,
-            zoomType: 'xy'
-        },
+function sector_function (sector_data){
+    var sectors = sector_data["legislators"][0]["contributors_by_sector"];
+    var amount = []
+    var sector = []
+    for (var i = 0; i < sectors.length; i++){
+        var contribution_instance = new Object();
+        contribution_instance.sector = sectors[i].sector;
+        contribution_instance.num_contributions = sectors[i].count
+        contribution_instance.amount = sectors[i].amount
+        contribution_instance.amount = parseInt(contribution_instance.amount);
+        amount.push(contribution_instance.amount);
+        sector.push(contribution_instance.sector)
+    };
 
-        title: {
-            text: 'Funding by Sector'
-        },
+    alert(sector);
+    console.log(sector);
 
-        xAxis: {
-            gridLineWidth: 1
-        },
 
-        yAxis: {
-            startOnTick: false,
-            endOnTick: false
-        },
-
-        series: [{
-            data: [
-                [9, 81, 63],
-                [98, 5, 89],
-                [51, 50, 73],
-                [41, 22, 14],
-                [58, 24, 20],
-                [78, 37, 34],
-                [55, 56, 53],
-                [18, 45, 70],
-                [42, 44, 28],
-                [3, 52, 59],
-                [31, 18, 97],
-                [79, 91, 63],
-                [93, 23, 23],
-                [44, 83, 22]
-            ],
-            marker: {
-                fillColor: {
-                    radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
-                    stops: [
-                        [0, 'rgba(255,255,255,0.5)'],
-                        [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0.5).get('rgba')]
-                    ]
+     $(function () {
+        // Set up the chart
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'slider-three',
+                type: 'column',
+                backgroundColor: 'transparent',
+                margin: 75,
+                options3d: {
+                    enabled: true,
+                    alpha: 15,
+                    beta: 15,
+                    depth: 50,
+                    viewDistance: 25
                 }
-            }
-        }, {
-            data: [
-                [42, 38, 20],
-                [6, 18, 1],
-                [1, 93, 55],
-                [57, 2, 90],
-                [80, 76, 22],
-                [11, 74, 96],
-                [88, 56, 10],
-                [30, 47, 49],
-                [57, 62, 98],
-                [4, 16, 16],
-                [46, 10, 11],
-                [22, 87, 89],
-                [57, 91, 82],
-                [45, 15, 98]
-            ],
-            marker: {
-                fillColor: {
-                    radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
-                    stops: [
-                        [0, 'rgba(255,255,255,0.5)'],
-                        [1, Highcharts.Color(Highcharts.getOptions().colors[1]).setOpacity(0.5).get('rgba')]
-                    ]
+            },
+            title: {
+                text: 'Funding by Sector'
+            },
+            subtitle: {
+                text: ''
+            },
+            plotOptions: {
+                column: {
+                    depth: 25
                 }
-            }
-        }]
+            },
 
+            xAxis: {
+                categories: sector,
+                labels: {
+                    maxStaggerLines: 1,
+                    // overflow: 'justify',
+                    // staggerLines: 2
+                    // showFirstLabel: true,
+                    // enabled: true
+                }
+            },
+            series: [{
+                showInLegend: false,
+                data: amount
+            }]
+        });
+
+        function showValues() {
+            $('#R0-value').html(chart.options.chart.options3d.alpha);
+            $('#R1-value').html(chart.options.chart.options3d.beta);
+        }
+
+        // Activate the sliders
+        $('#R0').on('change', function () {
+            chart.options.chart.options3d.alpha = this.value;
+            showValues();
+            chart.redraw(false);
+        });
+        $('#R1').on('change', function () {
+            chart.options.chart.options3d.beta = this.value;
+            showValues();
+            chart.redraw(false);
+        });
+
+        showValues();
     });
-});
+};

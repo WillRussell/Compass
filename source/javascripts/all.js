@@ -104,6 +104,17 @@ $(function () {
                         type_function (data)
                     }
                 })
+                $.ajax({
+                    type:"GET",
+                    url: "https://peaceful-sea-4129.herokuapp.com/api/v1/contributors_by_sector.json",
+                    data: { lastname: lastname,
+                        state: state,
+                        title: title,
+                    },
+                    success:function(data){
+                        sector_function (data)
+                    }
+                })
             }
         })
     });
