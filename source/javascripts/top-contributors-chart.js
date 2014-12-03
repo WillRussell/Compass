@@ -19,21 +19,29 @@ function topContributors_function (contributor_data){
     $(function () {
         $('#slider-one').highcharts({
             chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                },
                 backgroundColor: 'transparent',
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false
+
             },
             title: {
                 text: 'Top contributors'
             },
             tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                pointFormat: '{series.name}:<b>${point.y:.1f}</b>'
             },
             plotOptions: {
                 pie: {
                     allowPointSelect: true,
                     cursor: 'pointer',
+                    depth: 35,
                     dataLabels: {
                         enabled: true,
                         format: '<b>{point.name}</b>: ${point.y:.1f}',
@@ -45,7 +53,7 @@ function topContributors_function (contributor_data){
             },
             series: [{
                 type: 'pie',
-                name: 'Browser share',
+                name: 'Contribution amount',
                 data: bigDataArray
             }]
         });

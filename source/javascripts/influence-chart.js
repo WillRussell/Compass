@@ -9,7 +9,7 @@ $(function () {
             text: 'Influence Score'
         },
         subtitle: {
-            text: 'Source: ???'
+            text: 'temporary dummy chart'
         },
         xAxis: {
             title: {
