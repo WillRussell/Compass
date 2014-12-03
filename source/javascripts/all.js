@@ -115,23 +115,19 @@ $(function () {
                         sector_function (data)
                     }
                 })
+                $.ajax({
+                    type:"GET",
+                    url: "https://peaceful-sea-4129.herokuapp.com/api/v1/top_contributors.json",
+                    data: { lastname: lastname,
+                        state: state,
+                        title: title,
+                    },
+                    success:function(data){
+                        topContributors_function (data)
+                    }
+                })
             }
         })
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

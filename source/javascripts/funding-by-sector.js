@@ -4,19 +4,26 @@ function sector_function (sector_data){
     var sectors = sector_data["legislators"][0]["contributors_by_sector"];
     var amount = []
     var sector = []
+    var numContributions = []
     for (var i = 0; i < sectors.length; i++){
         var contribution_instance = new Object();
         contribution_instance.sector = sectors[i].sector;
-        contribution_instance.num_contributions = sectors[i].count
+        if (contribution_instance.sector === "Communications/Electronics"){
+            contribution_instance.sector = "Communication/ Electronics";
+        } else if (contribution_instance.sector === "Finance/Insurance/Real Estate"){
+            contribution_instance.sector = "Finance/ Insurance/ Real Estate"
+        } else if (contribution_instance.sector === "Energy/Natural Resources"){
+            contribution_instance.sector = "Energy/ Natural"
+        } else if (contribution_instance.sector === "Ideology/Single Issue"){
+            contribution_instance.sector = "Ideology/ Single Issue"
+        }
+        contribution_instance.numContributions = sectors[i].count
         contribution_instance.amount = sectors[i].amount
         contribution_instance.amount = parseInt(contribution_instance.amount);
         amount.push(contribution_instance.amount);
-        sector.push(contribution_instance.sector)
+        sector.push(contribution_instance.sector);
+        numContributions.push(contribution_instance.numContributions)
     };
-
-    alert(sector);
-    console.log(sector);
-
 
      $(function () {
         // Set up the chart
@@ -28,7 +35,7 @@ function sector_function (sector_data){
                 margin: 75,
                 options3d: {
                     enabled: true,
-                    alpha: 15,
+                    alpha: 10,
                     beta: 15,
                     depth: 50,
                     viewDistance: 25
@@ -50,13 +57,10 @@ function sector_function (sector_data){
                 categories: sector,
                 labels: {
                     maxStaggerLines: 1,
-                    // overflow: 'justify',
-                    // staggerLines: 2
-                    // showFirstLabel: true,
-                    // enabled: true
                 }
             },
             series: [{
+                name: "Contribution",
                 showInLegend: false,
                 data: amount
             }]

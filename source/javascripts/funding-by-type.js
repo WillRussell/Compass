@@ -1,4 +1,4 @@
-//--- Highcharts for section 2 graph ---
+// --- Highcharts for section 2 graph ---
 function type_function (type_data){
     var total_indiv_contributions = type_data["legislators"][0]["contributors_by_type"]["Individuals"][1].slice(1, -3);
     var total_pac_contributions = type_data["legislators"][0]["contributors_by_type"]["PACs"][1].slice(1, -3);
@@ -34,3 +34,4 @@ function type_function (type_data){
         }],
     });
 };
+
