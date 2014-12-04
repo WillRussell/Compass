@@ -14,8 +14,6 @@ function topContributors_function (contributor_data){
         bigDataArray.push(smallDataArray);
     }
 
-    console.log(bigDataArray);
-
     $(function () {
         $('#slider-one').highcharts({
             chart: {

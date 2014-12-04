@@ -7,6 +7,9 @@
 //= require script
 
 
+
+
+
 // ---Navbar fade ---
 jQuery(document).on("scroll",function(){
     if($(document).scrollTop()>60){
@@ -15,6 +18,8 @@ jQuery(document).on("scroll",function(){
         $(".contain-to-grid").removeClass("undocked");
     }
 });
+
+
 
 // ---Legislators select slidedown panel ---
 $(function() {
