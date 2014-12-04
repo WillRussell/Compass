@@ -142,6 +142,17 @@ $(function () {
                         votingRecord_function (data)
                     }
                 })
+                $.ajax({
+                    type:"GET",
+                    url:"https://peaceful-sea-4129.herokuapp.com/api/v1/issue_ratings_dummy.json",
+                    data: { lastname: lastname,
+                              state: state,
+                              title: title,
+                    },
+                    success:function(data){
+                        issueRatings_function (data)
+                    }
+                })
             }
         })
     });
