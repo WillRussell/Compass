@@ -19,10 +19,6 @@ jQuery(document).on("scroll",function(){
     }
 });
 
-
-
-
-
 // ---Legislators select slidedown panel ---
 $(function() {
     $('.search-button').on('click', function () {
