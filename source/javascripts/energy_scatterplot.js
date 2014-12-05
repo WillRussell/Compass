@@ -31,13 +31,16 @@ function energyRatings_function (energyRating_data){
             xAxis: {
 
                 title: {
-                    enabled: true,
+                    // enabled: true,
                 },
+                // type: 'logarithmic',
+
             },
             yAxis: {
                 title: {
                     text: 'Agreement Score'
-                }
+                },
+                min: 0,
             },
             // legend: {
             //     layout: 'vertical',
