@@ -29,7 +29,7 @@ function energyRatings_function (energyRating_data){
                 text: 'Source: ???'
             },
             xAxis: {
-                type: 'logarithmic',
+
                 title: {
                     enabled: true,
                 },
