@@ -25,6 +25,5 @@ gem 'font-awesome-sass'
 
 gem 'rack-contrib'
 
-group :development do
+
   gem 'unicorn'
-end

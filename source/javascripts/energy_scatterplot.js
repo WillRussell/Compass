@@ -34,7 +34,6 @@ function energyRatings_function (energyRating_data){
                     // enabled: true,
                 },
                 // type: 'logarithmic',
-
             },
             yAxis: {
                 title: {
