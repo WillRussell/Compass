@@ -21,6 +21,8 @@ jQuery(document).on("scroll",function(){
 
 
 
+
+
 // ---Legislators select slidedown panel ---
 $(function() {
     $('.search-button').on('click', function () {
@@ -144,13 +146,21 @@ $(function () {
                 })
                 $.ajax({
                     type:"GET",
-                    url:"https://peaceful-sea-4129.herokuapp.com/api/v1/issue_ratings_dummy.json",
+                    url:"https://peaceful-sea-4129.herokuapp.com/api/v1/issue_ratings.json",
                     data: { lastname: lastname,
                               state: state,
                               title: title,
                     },
                     success:function(data){
                         issueRatings_function (data)
+                    }
+                })
+                $.ajax({
+                    type:"GET",
+                    url:"http://peaceful-sea-4129.herokuapp.com/api/v1/aggregated_legislator_issue_scores.json",
+                    data: { issue: "Oil and Energy" },
+                    success:function(data){
+                        energyRatings_function (data)
                     }
                 })
             }

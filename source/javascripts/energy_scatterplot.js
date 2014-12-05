@@ -1,33 +1,32 @@
-function issueRatings_function (issueRatings_data){
-    var issueRatings = issueRatings_data["legislators"][0]["issue_ratings_dummy"];
-    var issueNameArray = [];
-    var bigDataArray = [];
-    for (var i = 0; i < issueRatings.length; i++){
-        var smallDataArray = [];
-        var issue_instance = new Object();
-        issue_instance.name = issueRatings[i].issue_name;
-        issue_instance.fundingScore = issueRatings[i].funding_score;
-        issue_instance.agreementScore = issueRatings[i].agreement_score;
-        smallDataArray.push(issue_instance.fundingScore);
-        smallDataArray.push(issue_instance.agreementScore);
-        smallDataArray.push(issue_instance.name);
-        bigDataArray.push(smallDataArray);
+function energyRatings_function (energyRating_data){
+    var energyRating = energyRating_data["legislators"][0]["legislator_issue_scores"];
+    var bigDataArray = []
+    for (var i = 0; i < energyRating.length; i++){
+        if (energyRating[i]["issue_ratings_dummy"].length < 1) continue;
+        var data_point = [];
+        var funding_score = energyRating[i]["issue_ratings_dummy"][0]["funding_score"];
+        data_point.push(funding_score);
+        var agreement_score = energyRating[i]["issue_ratings_dummy"][0]["agreement_score"]
+        data_point.push(agreement_score);
+        var name = energyRating[i]["firstname"] + " " + energyRating[i]["lastname"];
+        data_point.push(name);
+        bigDataArray.push(data_point);
     };
 
     console.log(bigDataArray);
 
         $(function () {
-        $('#issue-ratings').highcharts({
+        $('#energy_scatterplot').highcharts({
             chart: {
                 backgroundColor: 'transparent',
                 type: 'scatter',
                 zoomType: 'xy'
             },
             title: {
-                text: 'Issue Ratings'
+                text: 'Issue'
             },
             subtitle: {
-                text: ''
+                text: 'Source: ???'
             },
             xAxis: {
                 title: {

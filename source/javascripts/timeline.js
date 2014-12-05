@@ -16,6 +16,8 @@ function timeline_function (timeline_data) {
         timeline_array.push(timeline_event);
     };
 
+    console.log(timeline_array);
+
     $('#timeline').highcharts({
         chart: {
             type: 'line',
@@ -38,7 +40,6 @@ function timeline_function (timeline_data) {
         exporting: { enabled: false },
         credits: { enabled: false },
         series: [{
-            name: 'Jane',
             data: timeline_array
         }],
         tooltip: {
