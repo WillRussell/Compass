@@ -19,6 +19,7 @@ jQuery(document).on("scroll",function(){
     }
 });
 
+
 // ---Legislators select slidedown panel ---
 $(function() {
     $('.search-button').on('click', function () {
@@ -73,6 +74,22 @@ $(function () {
                     var name = JSON.stringify(data["legislators"][0]["firstname"]).slice(1, -1) + " " + (data["legislators"][0]["lastname"]);
                     var district = JSON.stringify(data["legislators"][0]["district"]).slice(1, -1);
                     var phone =  JSON.stringify(data["legislators"][0]["phone"]).slice(1, -1);
+                    var ajax_contributions_by_industry = {
+                                    type:"GET",
+                                    url:"https://peaceful-sea-4129.herokuapp.com/api/v1/contributions_by_industry.json",
+                                    data: { lastname: lastname,
+                                              state: state,
+                                              title: title,
+                                    },
+                    };
+                    var ajax_agreement_by_industry = {
+                    type:"GET",
+                    url:"https://peaceful-sea-4129.herokuapp.com/api/v1/agreement_score_by_industry.json",
+                    data: { lastname: lastname,
+                              state: state,
+                              title: title,
+                    },
+                    };
 
                 $(".legislator-profile").append('<img id="profile-pic" src=' + picture_url + ' ">'
                     +'<h3>' + name + '  ' + '('+party+')' + '</h3>'
@@ -128,7 +145,7 @@ $(function () {
                     success:function(data){
                         topContributors_function (data)
                     }
-                })
+                }),
                 $.ajax({
                     type:"GET",
                     url:"https://peaceful-sea-4129.herokuapp.com/api/v1/most_recent_votes.json",
@@ -139,26 +156,46 @@ $(function () {
                     success:function(data){
                         votingRecord_function (data)
                     }
-                })
-                $.ajax({
-                    type:"GET",
-                    url:"https://peaceful-sea-4129.herokuapp.com/api/v1/issue_ratings.json",
-                    data: { lastname: lastname,
-                              state: state,
-                              title: title,
-                    },
-                    success:function(data){
-                        issueRatings_function (data)
+                }),
+
+
+                $.when( $.ajax(ajax_contributions_by_industry) , $.ajax(ajax_agreement_by_industry) ).done(function( contributions, agreement_score ) {
+                    var contributions_object = contributions[0].legislators[0].contributions_by_industry;
+                    var agreement_object = agreement_score[0].legislators[0].agreement_score_by_industry
+                    var bigDataArray = []
+                    for (var industry in contributions_object) {
+                        var point_object = new Object();
+                        point_object.x = contributions_object[industry];
+                        point_object.y = agreement_object[industry];
+                        point_object.name = industry;
+                        bigDataArray.push(point_object);
                     }
-                })
-                $.ajax({
-                    type:"GET",
-                    url:"http://peaceful-sea-4129.herokuapp.com/api/v1/aggregated_legislator_issue_scores.json",
-                    data: { issue: "Oil and Energy" },
-                    success:function(data){
-                        energyRatings_function (data)
-                    }
-                })
+                        scatterplot_function(bigDataArray)
+                });
+
+
+
+
+                // Delete
+                // $.ajax({
+                //     type:"GET",
+                //     url:"https://peaceful-sea-4129.herokuapp.com/api/v1/issue_ratings.json",
+                //     data: { lastname: lastname,
+                //               state: state,
+                //               title: title,
+                //     },
+                //     success:function(data){
+                //         issueRatings_function (data)
+                //     }
+                // }),
+                // $.ajax({
+                //     type:"GET",
+                //     url:"http://peaceful-sea-4129.herokuapp.com/api/v1/aggregated_legislator_issue_scores.json",
+                //     data: { issue: "Oil and Energy" },
+                //     success:function(data){
+                //         energyRatings_function (data)
+                //     }
+                // })
             }
         })
     });

@@ -16,7 +16,6 @@ function timeline_function (timeline_data) {
         timeline_array.push(timeline_event);
     };
 
-    console.log(timeline_array);
 
     $('#timeline').highcharts({
         chart: {

@@ -26,4 +26,4 @@ gem 'font-awesome-sass'
 gem 'rack-contrib'
 
 
-  gem 'unicorn'
+gem 'unicorn'
