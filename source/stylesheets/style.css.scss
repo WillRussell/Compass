@@ -14,11 +14,11 @@
 
 .grid {
   transition: background 0.5s ease;
-  background:rgba(255,255,255,0.5);
+  background:rgba(155,179,191, .5);
 
   &.undocked {
     transition: background 0.5s ease;
-    background:rgba(155,179,191, .5);
+    background:rgba(255,255,255,0.5);
   }
 }
 
@@ -70,6 +70,7 @@
 
 .top-bar {
       opacity: 0.9;
+      height: 66px;
 };
 
 .tab-bar {
@@ -258,3 +259,6 @@ body {
 g.highcharts-axis {
   display: none;
 }
+
+
+

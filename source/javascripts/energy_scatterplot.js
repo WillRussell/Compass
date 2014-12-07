@@ -55,7 +55,7 @@ function scatterplot_function (bigDataArray){
                     },
                     tooltip: {
                         headerFormat: '{point.name}',
-                        pointFormat: '{point.name}: Funding Score: {point.x}<br>' + "Agreement Score: {point.y}"
+                        pointFormat: '<strong>{point.name}:</strong><br> Contribution Amount: {point.x}<br>' + "Agreement Score: {point.y}"
                     }
                 }
             },
