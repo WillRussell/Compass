@@ -1,7 +1,7 @@
-function scatterplot_function (bigDataArray){
+function industry_specific_scatterplot_function (bigDataArray){
 
-    $(function () {
-        $('#energy_scatterplot').highcharts({
+        $(function () {
+        $('#industry_specific_scatterplot').highcharts({
             chart: {
                 backgroundColor: 'transparent',
                 type: 'scatter',
@@ -56,23 +56,13 @@ function scatterplot_function (bigDataArray){
                     },
                     events: {
                         click: function(event) {
-                            $.ajax({
-                                type:"GET",
-                                url:"https://peaceful-sea-4129.herokuapp.com/api/v1/most_recent_votes.json",
-                                data: {   lastname: "Burr",
-                                            state: "NC",
-                                            title: "sen",
-                                },
-                                success:function(data){
-                                    industry_specific_scatterplot_function (data)
-                                }
-                            })
+                            alert('x: ' + event.chartX + ', y: ' + event.chartY);
                         }
                     }
                 }
             },
             series: [{
-                data: bigDataArray
+                data: [ [1,0], [2,2], [3,1] ]
             }],
         });
     });
