@@ -126,17 +126,6 @@ $(function () {
                 })
                 $.ajax({
                     type:"GET",
-                    url: "https://peaceful-sea-4129.herokuapp.com/api/v1/contributors_by_sector.json",
-                    data: { lastname: lastname,
-                        state: state,
-                        title: title,
-                    },
-                    success:function(data){
-                        sector_function (data)
-                    }
-                })
-                $.ajax({
-                    type:"GET",
                     url: "https://peaceful-sea-4129.herokuapp.com/api/v1/top_contributors.json",
                     data: { lastname: lastname,
                         state: state,
@@ -160,6 +149,7 @@ $(function () {
 
 
                 $.when( $.ajax(ajax_contributions_by_industry) , $.ajax(ajax_agreement_by_industry) ).done(function( contributions, agreement_score ) {
+                    sector_function(contributions);
                     var contributions_object = contributions[0].legislators[0].contributions_by_industry;
                     var agreement_object = agreement_score[0].legislators[0].agreement_score_by_industry
                     var bigDataArray = []
