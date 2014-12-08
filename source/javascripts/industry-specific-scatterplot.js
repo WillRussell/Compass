@@ -59,7 +59,7 @@ function industry_specific_scatterplot_function (bigDataArray){
                     },
                     events: {
                         click: function(event) {
-                            alert('x: ' + event.chartX + ', y: ' + event.chartY);
+                            // alert('x: ' + event.chartX + ', y: ' + event.chartY);
                         }
                     }
                 }
