@@ -1,40 +1,48 @@
- <div class="contain-to-grid grid fixed">
-  <nav class="top-bar data-topbar" role="navigation">
+<div class="contain-to-grid grid fixed">
+  <nav class="top-bar" data-topbar>
     <ul class="title-area">
+
       <li class="name">
-        <h1><a href="#"  id="logo"> COMPASS</a></h1>
+        <h1>
+          <a href="#">
+            Compass
+          </a>
+        </h1>
       </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span class="white">menu</span></a></li>
     </ul>
 
     <section class="top-bar-section">
-      <ul class="right">
-        <li>
-          <div class="row collapse ">
-            <div class="large-6 small-7 columns ">
-              <form action="http://requestb.in/t9jg5xt9"  method="get">
-              <input  type="text"  name="address" id="address" placeholder="Enter your address">
+
+      <ul class="right form-border">
+        <li class="has-form ">
+          <div class="row collapse">
+            <div class="large-8 small-9 columns">
+            <form action="http://requestb.in/t9jg5xt9"  method="get">
+              <input type="text" name="address" id="address" placeholder="Enter your address">
             </div>
-            <div class="large-3 small-3 columns">
-              <a href="#" class="right button small  active search-button"><i class="fa fa-search"></i></a>
-              </form>
-            </div>
-            <div class="large-3 small-2 columns">
-              <a href="#" id="thumbnail-link"><img src="stylesheets/images/silhouette.png" alt="" id="thumbnail" class="search-button"></a>
+            <div class="large-4 small-3 columns">
+            <a href="#" class="right button small  active search-button"><i class="fa fa-search"></i></a>
+            </form>
             </div>
           </div>
         </li>
       </ul>
 
-      <div class="left">
-        <dl class="tab-bar sub-nav" data-magellan-expedition>
-          <dd data-magellan-arrival="section-one"><a href="#one">Profile</a></dd>
-          <dd data-magellan-arrival="section-two"><a href="#two">Funding</a></dd>
-          <dd data-magellan-arrival="section-three"><a href="#three">Voting</a></dd>
-          <dd data-magellan-arrival="section-four"><a href="#four">Influence</a></dd>
-        </dl>
-      </div>
+
+        <ul class="left">
+          <dl class="top-bar sub-nav" data-magellan-expedition>
+            <dd data-magellan-arrival="section-one"><a href="#one">Profile</a></dd>
+            <dd data-magellan-arrival="section-two"><a href="#two">Funding</a></dd>
+            <dd data-magellan-arrival="section-three"><a href="#three">Voting</a></dd>
+            <dd data-magellan-arrival="section-four"><a href="#four">Influence</a></dd>
+          </dl>
+        </ul>
+
     </section>
   </nav>
+</div>
+
 
   <div class="panel">
     <ul class="row">
@@ -44,78 +52,78 @@
 </div>
 
 
-<section class="module parallax parallax-1">
-  <div class="container">
-    <a name="one"></a>
-    <h1 data-magellan-destination="section-one"></h1>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="yo large-6 columns">
-      <div class="legislator-profile" id="profile"></div>
-    </div>
-
-    <div class="large-6 columns">
-      <div id="chart-one"></div>
-    </div>
-
-    <div class="large-12 columns">
-      <div id="timeline"></div>
-    </div>
-  </div>
-</section>
 
 
-<section class="module parallax parallax-2">
-  <div class="container">
-    <a name="two"></a>
-    <h1 data-magellan-destination="section-two"></h1>
 
+  <!-- PARALLAX SECTION 1-->
+    <div class="fullscreen background parallax first-parallax" style="background-image:url('stylesheets/images/10-Subtle-Textures02.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100">
+       <div class="row parallax-one">
+          <a name="one"></a>
+          <h1 data-magellan-destination="section-one"></h1>
 
-    <div class="large-12 columns">
-      <br>
-      <br>
-      <br>
+          <br>
 
-      <div class="right">
-        <a data-orbit-link="headline-1" class="small button round slidernav">
-          Top Contributors
-        </a>
-        <a data-orbit-link="headline-2" class="small button round slidernav">
-          By source
-        </a>
-        <a data-orbit-link="headline-3" class="small button round slidernav">
-          By sector
-        </a>
+          <div class="large-6 columns">
+            <div class="legislator-profile" id="profile"></div>
+          </div>
+
+          <div class="large-6 columns">
+            <div id="chart-one"></div>
+          </div>
+
+          <div class="large-12 columns">
+            <div id="timeline"></div>
+          </div>
+          </br>
+        </div>
       </div>
+    <!--   END PARALLAX SECTION 1-->
 
-      <ul class="example-orbit-content" data-orbit data-options='timer: false;'>
-        <li data-orbit-slide="headline-1">
-          <div id="slider-one"></div>
-        </li>
-        <li data-orbit-slide="headline-2">
-          <div id="slider-two"></div>
-        </li>
-        <li data-orbit-slide="headline-3">
-          <div id="slider-three"></div>
-        </li>
-      </ul>
+
+
+  <!-- PARALLAX SECTION 2-->
+<div class="not-fullscreen background parallax second-parallax" style="background-image:url('stylesheets/images/10-Subtle-Textures02.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100">
+  <div class="row parallax-two">
+      <a name="two"></a>
+      <h1 data-magellan-destination="section-two"></h1>
+
+
+        <div class="large-12 columns">
+          <div class="right">
+            <a data-orbit-link="headline-1" class="small button round slidernav">
+              Top Contributors
+            </a>
+            <a data-orbit-link="headline-2" class="small button round slidernav">
+              By source
+            </a>
+            <a data-orbit-link="headline-3" class="small button round slidernav">
+              By sector
+            </a>
+          </div>
+
+          <ul class="example-orbit-content" data-orbit data-options='timer: false;'>
+            <li data-orbit-slide="headline-1">
+              <div id="slider-one"></div>
+            </li>
+            <li data-orbit-slide="headline-2">
+              <div id="slider-two"></div>
+            </li>
+            <li data-orbit-slide="headline-3">
+              <div id="slider-three"></div>
+            </li>
+          </ul>
+        </div>
     </div>
   </div>
-</section>
+    <!--   END PARALLAX SECTION 2-->
 
-
-
-<section class="module parallax parallax-3">
-  <div class="container">
+<!-- PARALLAX SECTION 3-->
+<div class="fullscreen background parallax" style="background-image:url('stylesheets/images/10-Subtle-Textures02.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100" data-oriz-pos="100%">
+   <div class="row parallax-three">
     <a name="three"></a>
     <h1 data-magellan-destination="section-three"></h1>
-    <div class="large-12 columns">
 
+    <div class="large-12 columns">
       <table id="voting-record" class="display compact" cellspacing="0" width="100%">
         <thead>
           <tr>
@@ -134,35 +142,21 @@
       </table>
     </div>
   </div>
-</section>
+</div>
+<!--   END PARALLAX SECTION 3-->
 
 
-
-<section class="module parallax parallax-4">
-  <div class="container">
+<!-- PARALLAX SECTION 4-->
+<div class="fullscreen background parallax fourth-parallax" style="background-image:url('stylesheets/images/10-Subtle-Textures02.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100">
+   <div class="row parallax-four">
     <a name="four"></a>
     <h1 data-magellan-destination="section-four"></h1>
     <div class="large-12 columns">
       <div id="energy_scatterplot"></div>
-  </div>
-  <div class="large-12 columns">
-      <div id="industry_specific_scatterplot"></div>
-  </div>
-</section>
-
-
-
-
-<!-- <footer>
-    <div class="row">
-      <div class="small-12 medium-12 large-12 columns">
-        <h4>Footer Content</h4>
-      </div>
     </div>
-  </footer>
- -->
-
-
-
-
-
+    <div class="large-12 columns">
+      <div id="industry_specific_scatterplot"></div>
+    </div>
+  </div>
+</div>
+<!--   END PARALLAX SECTION 4-->

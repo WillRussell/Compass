@@ -15,6 +15,8 @@ function votingRecord_function (voting_data){
     }
     $('#voting-record').dataTable({
         "order": [[ 0, "desc" ]],
+         "iDisplayLength": 15,
+        "bLengthChange": false,
          "data": bigDataArray,
             "columns": [
             { date: "date" },
@@ -23,4 +25,3 @@ function votingRecord_function (voting_data){
         ]
     });
 };
-

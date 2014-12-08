@@ -57,5 +57,5 @@ function topContributors_function (contributor_data){
         });
     });
 
-    $(".parallax-2").resize();
+    // $(".parallax-two").resize();
 };
