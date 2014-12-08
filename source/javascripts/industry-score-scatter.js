@@ -54,19 +54,35 @@ function scatterplot_function (bigDataArray){
                         headerFormat: '{point.name}',
                         pointFormat: '<strong>{point.name}:</strong><br> Contribution Amount: {point.x}<br>' + "Agreement Score: {point.y}"
                     },
-                    events: {
-                        click: function(event) {
-                            $.ajax({
-                                type:"GET",
-                                url:"https://peaceful-sea-4129.herokuapp.com/api/v1/most_recent_votes.json",
-                                data: {   lastname: "Burr",
-                                            state: "NC",
-                                            title: "sen",
-                                },
-                                success:function(data){
-                                    industry_specific_scatterplot_function (data)
-                                }
-                            })
+                },
+                series: {
+                    cursor: 'pointer',
+                    point: {
+                        events: {
+                            click: function(event) {
+
+                                $.ajax({
+                                    type:"GET",
+                                    url:"https://peaceful-sea-4129.herokuapp.com/api/v1/industry_scores.json",
+                                    data: {   industry: this.name,
+                                    },
+                                    success:function(data){
+                                        var industry_scores = data["legislators"][0]["industry_scores"];
+                                        var bigDataArray = [];
+                                        for (i = 0; i < industry_scores.length; i++) {
+                                            var point_object = new Object();
+                                            point_object.x = industry_scores[i]["contributions_to_industry"];
+                                            point_object.y = industry_scores[i]["agreement_score_with_industry"];
+                                            point_object.name = industry_scores[i]["firstname"] + " " + industry_scores[i]["lastname"];
+                                            point_object.title = industry_scores[i]["title"];
+                                            point_object.state = industry_scores[i]["state"];
+                                            point_object.party = industry_scores[i]["party"];
+                                            bigDataArray.push(point_object);
+                                        }
+                                        industry_specific_scatterplot_function (bigDataArray)
+                                    }
+                                })
+                            }
                         }
                     }
                 }

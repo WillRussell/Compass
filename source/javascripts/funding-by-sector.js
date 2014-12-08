@@ -6,7 +6,6 @@ function sector_function (data){
     for (var individual_contribution in contributions_object)
           sortable.push([individual_contribution, contributions_object[individual_contribution]])
     var sorted_contributions = sortable.sort(function(a, b) {return a[1] - b[1]})
-    debugger;
 
 
     var industries = Object.keys(contributions_object);
