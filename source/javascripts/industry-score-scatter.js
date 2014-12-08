@@ -21,6 +21,8 @@ function scatterplot_function (bigDataArray){
                 title: {
                     text: 'Liklihood of Agreement'
                 },
+                min: 0,
+                max: 1,
             },
             // legend: {
             //     layout: 'vertical',
@@ -77,6 +79,11 @@ function scatterplot_function (bigDataArray){
                                             point_object.title = industry_scores[i]["title"];
                                             point_object.state = industry_scores[i]["state"];
                                             point_object.party = industry_scores[i]["party"];
+                                            if (industry_scores[i]["party"] == "Republican") {
+                                                point_object.fillColor = "rgba(223, 83, 83, .5)";
+                                            } else {
+                                                 point_object.fillColor = "rgba(119, 152, 191, .5)";
+                                            }
                                             bigDataArray.push(point_object);
                                         }
                                         industry_specific_scatterplot_function (bigDataArray)

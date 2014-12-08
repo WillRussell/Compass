@@ -8,7 +8,7 @@ function industry_specific_scatterplot_function (bigDataArray){
                 zoomType: 'xy'
             },
             title: {
-                text: 'Industry Scores'
+                text: 'Industry Specific Scores'
             },
             xAxis: {
 
@@ -21,6 +21,9 @@ function industry_specific_scatterplot_function (bigDataArray){
                 title: {
                     text: 'Liklihood of Agreement'
                 },
+                min: 0,
+                max: 1,
+
             },
             // legend: {
             //     layout: 'vertical',
