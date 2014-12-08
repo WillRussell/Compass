@@ -1,57 +1,32 @@
-/* parallax background setup */
-.background {
-    background-repeat:no-repeat;
-    /* custom background-position */
-    background-position:50% 50%;
-    /* ie8- graceful degradation */
-    background-position:50% 50%\9 !important;
+.reveal-modal {
+  li{
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
-/* fullscreen setup */
-html, body {
-    /* give this to all tags from html to .fullscreen */
-    height:100%;
-}
-.fullscreen,
-.content-a {
-    width:100%;
-    min-height:100%;
-}
-.not-fullscreen,
-.not-fullscreen .content-a,
-.fullscreen.not-overflow,
-.fullscreen.not-overflow .content-a {
-    height:100%;
-    overflow:hidden;
-}
-
-
-/* visual styles */
-body{
-    margin:0;
-    font-family: 'Lucida Grande', sans-serif;
-    line-height:100px;
-  color:#ffffff;
-}
-section {
-  background:blue;
-}
-
+/*  .reveal-modal:after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+*/
  .first-parallax {
- border: solid 5px;
+ background-color:  rgb(213,222,217);
  }
 
  .second-parallax {
- border: solid 5px;
- }
+/* background-color:rgb(153,178,183);
+*/ }
 
  .third-parallax {
- border: solid 5px;
+ background-color: rgb(213,222,217);
  }
 
  .fourth-parallax {
- border: solid 5px;
- }
+/* background-color: rgb(217,206,178);
+*/ }
 
 
 #address {
