@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Compass</title>
+
+
+<link rel="stylesheet" href="javascripts/jquery-ui-1.11.2.custom/jquery-ui.min.css">
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+<!-- <script src="javascripts/jquery-ui-1.11.2.custom/external/jquery/jquery.js"></script>
+<script src="javascripts/jquery-ui-1.11.2.custom/jquery-ui.min.js"></script>
+ -->
+
+
+<link rel="stylesheet" type="text/css" href="javascripts/DataTables-1.10.4/media/css/jquery.dataTables.css">
+
+
+
+    <link href="/stylesheets/app.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body class="index">
+    <!-- <div id="myModal" class="reveal-modal" data-reveal>
+  <h2>Compass</h2>
+  <p class="lead">Enter your address to find your legislators</p>
+            <div class="row">
+            <form method="get">
+            <div class="large-10 columns">
+              <input type="text" name="address" id="address" placeholder="Enter your address">
+              </div>
+              <div class="large-2 columns">
+              <a href="#" class="right button small  active search-button" data-reveal-id="secondModal" data-reveal-ajax><i class="fa fa-search"></i></a>
+              </div>
+            </form>
+            </div>
+</div>
+
+
+<div id="secondModal" class="reveal-modal" data-reveal>
+
+      <p class="legislator-list  close-reveal-modal full"  id="legis-select">
+      </p>
+
+</div>
+ -->
+
+
+
+<div class="contain-to-grid grid fixed">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+
+      <li class="name">
+        <h1>
+          <a href="#">
+            Compass
+          </a>
+        </h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span class="white">menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+
+      <ul class="right form-border">
+        <li class="has-form ">
+          <div class="row collapse">
+            <div class="large-8 small-9 columns">
+            <form method="get">
+              <input type="text" name="address" id="address" placeholder="Enter your address">
+            </div>
+            <div class="large-4 small-3 columns">
+            <a href="#" class="right button small  active search-button"><i class="fa fa-search"></i></a>
+            </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+        <ul class="left">
+          <dl class="top-bar sub-nav" data-magellan-expedition>
+            <dd data-magellan-arrival="section-one"><a href="#one">Profile</a></dd>
+            <dd data-magellan-arrival="section-two"><a href="#two">Funding</a></dd>
+            <dd data-magellan-arrival="section-three"><a href="#three">Voting</a></dd>
+            <dd data-magellan-arrival="section-four"><a href="#four">Influence</a></dd>
+          </dl>
+        </ul>
+
+    </section>
+  </nav>
+</div>
+
+
+  <div class="panel">
+    <ul class="row">
+      <div class="legislator-list"  id="legis-select"></div>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+  <!-- PARALLAX SECTION 1-->
+    <div class="fullscreen background parallax first-parallax">
+       <div class="row parallax-one">
+          <a name="one"></a>
+          <div class="12-large-centered columns">
+            <br>
+            <h2 class="section-headline">Who is my legislator?</h2>
+          </div>
+          <h1 data-magellan-destination="section-one"></h1>
+          <br>
+          <div class="large-12 columns">
+            <div class="legislator-profile" id="profile"></div>
+          </div>
+
+          <div class="large-12 columns">
+            <div id="timeline"></div>
+          </div>
+        </div>
+      </div>
+    <!--   END PARALLAX SECTION 1-->
+
+
+
+  <!-- PARALLAX SECTION 2-->
+<div class="not-fullscreen background parallax second-parallax">
+  <div class="row parallax-two">
+      <a name="two"></a>
+      <h1 data-magellan-destination="section-two"></h1>
+      <br>
+      <h2 class="section-headline">Where does his/her money come from?</h2>
+
+
+
+        <div class="large-12 columns">
+          <div class="right">
+            <a data-orbit-link="headline-1" class="small button round slidernav">
+              By Industry
+            </a>
+            <a data-orbit-link="headline-2" class="small button round slidernav">
+              By source
+            </a>
+            <a data-orbit-link="headline-3" class="small button round slidernav">
+              Top Contributors
+            </a>
+          </div>
+
+          <ul class="example-orbit-content" data-orbit data-options='timer: false;'>
+            <li data-orbit-slide="headline-1">
+              <div id="slider-three"></div>
+            </li>
+            <li data-orbit-slide="headline-2">
+              <div id="slider-two"></div>
+            </li>
+            <li data-orbit-slide="headline-3">
+              <div id="slider-one"></div>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <!--   END PARALLAX SECTION 2-->
+
+<!-- PARALLAX SECTION 3-->
+<div class="fullscreen background parallax third-parallax">
+   <div class="row parallax-three">
+    <a name="three"></a>
+    <h1 data-magellan-destination="section-three"></h1>
+    <br>
+    <h2 class="section-headline">How does he/she vote?</h2>
+
+
+    <div class="large-12 columns">
+      <table id="voting-record" class="display" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Bill Description</th>
+            <th>Vote</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Date</td>
+            <td>Bill Description</td>
+            <td>Vote</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+  </div>
+</div>
+<!--   END PARALLAX SECTION 3-->
+
+
+<!-- PARALLAX SECTION 4-->
+<div class="fullscreen background parallax fourth-parallax">
+   <div class="row parallax-four">
+    <a name="four"></a>
+    <h1 data-magellan-destination="section-four"></h1>
+    <h2 class="section-headline">How do his/her contributions effect their vote?</h2>
+
+    <div class="large-6 columns">
+      <div id="energy_scatterplot"></div>
+    </div>
+    <div class="large-6 columns">
+      <div id="industry_specific_scatterplot"></div>
+    </div>
+  </div>
+  <br>
+</div>
+<!--   END PARALLAX SECTION 4-->
+
+
+
+
+
+  <!-- PARALLAX SECTION 5-->
+    <div class="fullscreen background parallax fifth-parallax">
+       <div class="row parallax-five">
+          <a name="five"></a>
+          <div class="12-large-centered columns">
+          <br>
+            <h2 class="section-headline">Temporary Headline</h2>
+          </div>
+          <h1 data-magellan-destination="section-five"></h1>
+
+          <br>
+
+          <div class="large-12 columns">
+            <div id="influence_and_ideology_scatterplot"></div>
+          </div>
+
+          </br>
+        </div>
+      </div>
+    <!--   END PARALLAX SECTION 5-->
+
+
+  <script src="/javascripts/all.js" type="text/javascript"></script>
+  <script src="/javascripts/custom.js" type="text/javascript"></script>
+  <script src="/javascripts/timeline.js" type="text/javascript"></script>
+  <script src="/javascripts/funding-by-type.js" type="text/javascript"></script>
+  <script src="/javascripts/funding-by-sector.js" type="text/javascript"></script>
+  <script src="/javascripts/top-contributors-chart.js" type="text/javascript"></script>
+  <script src="/javascripts/voting-record.js" type="text/javascript"></script>
+  <script src="/javascripts/issue-ratings.js" type="text/javascript"></script>
+  <script src="/javascripts/industry-score-scatter.js" type="text/javascript"></script>
+  <script src="/javascripts/industry-specific-scatterplot.js" type="text/javascript"></script>
+  <script src="/javascripts/influence_and_ideology_chart.js" type="text/javascript"></script>
+
+
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-3d.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://code.highcharts.com/modules/data.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+
+
+<script type="text/javascript" src="http://www.highcharts.com/media/com_demo/highslide-full.min.js"></script>
+<script type="text/javascript" src="http://www.highcharts.com/media/com_demo/highslide.config.js" charset="utf-8"></script>
+
+
+<script type="text/javascript" charset="utf8" src="javascripts/DataTables-1.10.4/media/js/jquery.dataTables.js"></script>
+
+  </body>
+</html>
