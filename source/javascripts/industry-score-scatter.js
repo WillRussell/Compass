@@ -66,7 +66,7 @@ function scatterplot_function (bigDataArray){
 
                                 $.ajax({
                                     type:"GET",
-                                    url:"https://peaceful-sea-4129.herokuapp.com/api/v1/industry_scores.json",
+                                    url:"http://api.civic-compass.org/api/v1/industry_scores.json",
                                     data: {   industry: this.name,
                                     },
                                     success:function(data){

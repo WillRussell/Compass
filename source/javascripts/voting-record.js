@@ -14,6 +14,7 @@ function votingRecord_function (voting_data){
         bigDataArray.push(smallDataArray);
     }
     $('#voting-record').dataTable({
+       destroy: true,
         "order": [[ 0, "desc" ]],
          "iDisplayLength": 15,
         "bLengthChange": false,
@@ -24,6 +25,7 @@ function votingRecord_function (voting_data){
             { vote: "Vote" }
         ]
     });
+       $(".parallax-three").resize();
 };
 
 // if ( $.fn.dataTable.isDataTable( '#voting-record' ) ) {
