@@ -52,7 +52,8 @@ function topContributors_function (contributor_data){
             series: [{
                 type: 'pie',
                 name: 'Contribution amount',
-                data: bigDataArray
+                data: bigDataArray,
+                animation: false,
             }]
         });
     });

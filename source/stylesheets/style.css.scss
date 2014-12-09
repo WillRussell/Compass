@@ -1,3 +1,8 @@
+.section-headline {
+font-family: 'Oswald', sans-serif;
+}
+
+
 .reveal-modal {
   li{
     list-style: none;
@@ -6,12 +11,18 @@
   }
 }
 
+table.dataTable th,
+    table.dataTable td {
+        white-space: nowrap;
+    }
+
 /*  .reveal-modal:after {
     content: ' ';
     display: block;
     clear: both;
   }
 */
+
  .first-parallax {
  background-color:  rgb(213,222,217);
  }
@@ -27,6 +38,14 @@
  .fourth-parallax {
 /* background-color: rgb(217,206,178);
 */ }
+
+ .fifth-parallax {
+ background-color: rgb(213,222,217);
+ }
+
+.section-headline {
+  text-align: center;
+}
 
 
 #address {
@@ -101,7 +120,7 @@ h3 {
   height: 50px;
 }
 
-.grid {
+/*.grid {
   transition: background 0.5s ease;
   background:black;
 
@@ -165,7 +184,7 @@ h3 {
     transition: background 0.5s ease;
     color:rgba(255, 255, 255, 1);
   }
-}
+}*/
 
 .top-bar {
       opacity: 0.9;

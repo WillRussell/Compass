@@ -5,7 +5,7 @@ function industry_specific_scatterplot_function (bigDataArray){
             chart: {
                 backgroundColor: 'transparent',
                 type: 'scatter',
-                zoomType: 'xy'
+                zoomType: 'xy',
             },
             title: {
                 text: 'Industry Specific Scores'

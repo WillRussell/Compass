@@ -5,21 +5,23 @@ function influence_and_ideology_scatter_function (influence_and_ideology_array){
             chart: {
                 backgroundColor: 'transparent',
                 type: 'scatter',
-                zoomType: 'xy'
+                zoomType: 'xy',
+                animation: false,
             },
             title: {
-                text: 'Influence vs Ideology Scores'
+                text: 'Influence of Money by Political View'
             },
             xAxis: {
 
                 title: {
-                    text: 'Ideology Scores'
+                    text: 'Political View'
                 },
             },
             yAxis: {
                 title: {
-                    text: 'Funder Influence Score'
+                    text: 'Influence of Money'
                 },
+                min: 0,
             },
             // legend: {
             //     layout: 'vertical',
@@ -55,6 +57,7 @@ function influence_and_ideology_scatter_function (influence_and_ideology_array){
                     },
                 },
                 series: {
+                    animation: false,
                     cursor: 'pointer',
                     point: {
                         events: {
@@ -65,6 +68,7 @@ function influence_and_ideology_scatter_function (influence_and_ideology_array){
                 }
             },
             series: [{
+                animation: false,
                 data: influence_and_ideology_array
             }],
         });

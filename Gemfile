@@ -27,3 +27,5 @@ gem 'rack-contrib'
 
 
 gem 'unicorn'
+
+gem 'middleman-deploy', '~> 1.0'

@@ -1,26 +1,27 @@
-<div id="myModal" class="reveal-modal" data-reveal>
+<!-- <div id="myModal" class="reveal-modal" data-reveal>
   <h2>Compass</h2>
   <p class="lead">Enter your address to find your legislators</p>
             <div class="row">
             <form method="get">
             <div class="large-10 columns">
-<!--               <input type="text" name="address" id="address" placeholder="Enter your address">
- -->              </div>
+              <input type="text" name="address" id="address" placeholder="Enter your address">
+              </div>
               <div class="large-2 columns">
-              <a href="#" class="right button small  active search-button" data-reveal-id="secondModal"><i class="fa fa-search"></i></a>
+              <a href="#" class="right button small  active search-button" data-reveal-id="secondModal" data-reveal-ajax><i class="fa fa-search"></i></a>
               </div>
             </form>
             </div>
 </div>
 
 
-<!-- <div id="secondModal" class="reveal-modal" data-reveal>
+<div id="secondModal" class="reveal-modal" data-reveal>
 
-      <p class="legislator-list"  id="legis-select"></p>
+      <p class="legislator-list  close-reveal-modal full"  id="legis-select">
+      </p>
 
 </div>
-
  -->
+
 
 
 <div class="contain-to-grid grid fixed">
@@ -84,23 +85,19 @@
     <div class="fullscreen background parallax first-parallax">
        <div class="row parallax-one">
           <a name="one"></a>
-          <h1 data-magellan-destination="section-one"></h1>
-
-          <br>
-
-
-          <div class="large-6 columns">
-            <div class="legislator-profile" id="profile"></div>
+          <div class="12-large-centered columns">
+            <br>
+            <h2 class="section-headline">Who is my legislator?</h2>
           </div>
-
-          <div class="large-6 columns">
-            <div id="influence_and_ideology_scatterplot"></div>
+          <h1 data-magellan-destination="section-one"></h1>
+          <br>
+          <div class="large-12 columns">
+            <div class="legislator-profile" id="profile"></div>
           </div>
 
           <div class="large-12 columns">
             <div id="timeline"></div>
           </div>
-          </br>
         </div>
       </div>
     <!--   END PARALLAX SECTION 1-->
@@ -112,30 +109,33 @@
   <div class="row parallax-two">
       <a name="two"></a>
       <h1 data-magellan-destination="section-two"></h1>
+      <br>
+      <h2 class="section-headline">Where does his/her money come from?</h2>
+
 
 
         <div class="large-12 columns">
           <div class="right">
             <a data-orbit-link="headline-1" class="small button round slidernav">
-              Top Contributors
+              By Industry
             </a>
             <a data-orbit-link="headline-2" class="small button round slidernav">
               By source
             </a>
             <a data-orbit-link="headline-3" class="small button round slidernav">
-              By sector
+              Top Contributors
             </a>
           </div>
 
           <ul class="example-orbit-content" data-orbit data-options='timer: false;'>
             <li data-orbit-slide="headline-1">
-              <div id="slider-one"></div>
+              <div id="slider-three"></div>
             </li>
             <li data-orbit-slide="headline-2">
               <div id="slider-two"></div>
             </li>
             <li data-orbit-slide="headline-3">
-              <div id="slider-three"></div>
+              <div id="slider-one"></div>
             </li>
           </ul>
         </div>
@@ -148,9 +148,12 @@
    <div class="row parallax-three">
     <a name="three"></a>
     <h1 data-magellan-destination="section-three"></h1>
+    <br>
+    <h2 class="section-headline">How does he/she vote?</h2>
+
 
     <div class="large-12 columns">
-      <table id="voting-record" class="display compact" cellspacing="0" width="100%">
+      <table id="voting-record" class="display" cellspacing="0" width="100%">
         <thead>
           <tr>
             <th>Date</th>
@@ -166,6 +169,7 @@
           </tr>
         </tbody>
       </table>
+      <br>
     </div>
   </div>
 </div>
@@ -177,13 +181,16 @@
    <div class="row parallax-four">
     <a name="four"></a>
     <h1 data-magellan-destination="section-four"></h1>
-    <div class="large-12 columns">
+    <h2 class="section-headline">How do his/her contributions effect their vote?</h2>
+
+    <div class="large-6 columns">
       <div id="energy_scatterplot"></div>
     </div>
-    <div class="large-12 columns">
+    <div class="large-6 columns">
       <div id="industry_specific_scatterplot"></div>
     </div>
   </div>
+  <br>
 </div>
 <!--   END PARALLAX SECTION 4-->
 
@@ -191,3 +198,23 @@
 
 
 
+  <!-- PARALLAX SECTION 5-->
+    <div class="fullscreen background parallax fifth-parallax">
+       <div class="row parallax-five">
+          <a name="five"></a>
+          <div class="12-large-centered columns">
+          <br>
+            <h2 class="section-headline">Temporary Headline</h2>
+          </div>
+          <h1 data-magellan-destination="section-five"></h1>
+
+          <br>
+
+          <div class="large-12 columns">
+            <div id="influence_and_ideology_scatterplot"></div>
+          </div>
+
+          </br>
+        </div>
+      </div>
+    <!--   END PARALLAX SECTION 5-->

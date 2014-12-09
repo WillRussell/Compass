@@ -25,3 +25,17 @@ function votingRecord_function (voting_data){
         ]
     });
 };
+
+// if ( $.fn.dataTable.isDataTable( '#voting-record' ) ) {
+//     table = $('#voting-record').DataTable();
+// }
+// else {
+//     table = $('#voting-record').DataTable({
+//         paging: false
+//     });
+// }
+
+// table = $('#voting-record').DataTable( {
+//     retrieve: true,
+//     paging: false
+// } );

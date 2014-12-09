@@ -54,7 +54,8 @@ function sector_function (data){
             series: [{
                 name: "Contribution",
                 showInLegend: false,
-                data: amounts
+                data: amounts,
+                animation: false,
             }]
         });
 

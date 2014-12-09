@@ -5,7 +5,7 @@ function scatterplot_function (bigDataArray){
             chart: {
                 backgroundColor: 'transparent',
                 type: 'scatter',
-                zoomType: 'xy'
+                zoomType: 'xy',
             },
             title: {
                 text: 'Industry Scores'
@@ -59,6 +59,7 @@ function scatterplot_function (bigDataArray){
                 },
                 series: {
                     cursor: 'pointer',
+                    animation: false,
                     point: {
                         events: {
                             click: function(event) {
@@ -95,6 +96,7 @@ function scatterplot_function (bigDataArray){
                 }
             },
             series: [{
+                animation: false,
                 data: bigDataArray
             }],
         });

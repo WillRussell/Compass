@@ -8,8 +8,9 @@
 
 
 
-// $(document).foundation();
-// $(document).ready(function(){$('#myModal').foundation('reveal', 'open')});
+$(document).foundation();
+$(document).ready(function(){$('#myModal').foundation('reveal', 'open')});
+
 
 
 
@@ -42,7 +43,7 @@ $(function() {
                     var title = JSON.stringify(data["legislators"][i]["title"]).slice(1, -1);
                     var party = JSON.stringify(data["legislators"][i]["party"]).slice(1, -1);
                     var picture = JSON.stringify(data["legislators"][i]["picture_url"]).slice(1, -1);
-                    $( ".legislator-list" ).append('<div class="small-4 columns"><li </li><li>' +firstname + ' ' + lastname + ' ' + '(' + party + ')  </li><a href="#" class="legislatorlink" data-lastname="' + lastname + '" data-state="' + state + '" data-title="' + title + '"><img src="' + picture + '" ></a></div>');
+                    $( ".legislator-list" ).append('<div class="small-4 columns"><li>' +firstname + ' ' + lastname + ' ' + '(' + party + ')  </li><a href="#" class="legislatorlink" data-lastname="' + lastname + '" data-state="' + state + '" data-title="' + title + '"><img src="' + picture + '" ></a></div>');
                 }
             }
         });
