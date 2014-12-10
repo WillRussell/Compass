@@ -19,7 +19,7 @@ function scatterplot_function (bigDataArray){
             },
             yAxis: {
                 title: {
-                    text: 'Liklihood of Agreement'
+                    text: 'Likelihood of Agreement'
                 },
                 min: 0,
                 max: 1,
@@ -64,7 +64,7 @@ function scatterplot_function (bigDataArray){
                     point: {
                         events: {
                             click: function(event) {
-
+                                $('.industry-specific-placeholder').addClass('hidden');
                                 $.ajax({
                                     type:"GET",
                                     url:"http://api.civic-compass.org/api/v1/industry_scores.json",
