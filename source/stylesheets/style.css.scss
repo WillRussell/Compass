@@ -19,10 +19,6 @@ padding: 20px 0px;
   }
 }
 
-table.dataTable th,
-    table.dataTable td {
-        white-space: nowrap;
-    }
 
 /*  .reveal-modal:after {
     content: ' ';
@@ -157,71 +153,6 @@ h3 {
   height: 50px;
 }
 
-/*.grid {
-  transition: background 0.5s ease;
-  background:black;
-
-  &.undocked {
-    transition: background 0.5s ease;
-    background:rgba(255,255,255,0.1);
-  }
-}
-
-.top-bar {
-  background:transparent;
-
-  transition: padding-top 0.5s ease;
-
-  transition: height 0.5s ease;
-  .name h1 a {
-    transition: color 0.5s ease;
-    color:white;
-  }
-}
-.undocked .top-bar {
-  .name h1 a {
-    transition: color 0.5s ease;
-    color:rgba(black, .8);
-  }
- .white {
-  color: black;
- }
- .name dl dd a{
-  color:black;
- }
-}
-
-.top-bar-section li a:not(.button) {
-  background:transparent;
-}
-.undocked .top-bar-section li:not(.has-form) a:not(.button) {
-  background:transparent;
-}
-
-.top-bar-section ul li {
-  background:transparent;
-  & > a {
-    transition: color 0.5s ease;
-    color:rgba(0, 0, 0, 1);
-  }
-}
-
-
-.menu-icon {
-  background:transparent;
-  & > a {
-    transition: color 0.5s ease;
-    color:rgba(0, 0, 0, 1);
-  }
-}
-
-.undocked .top-bar-section ul li {
-  background:transparent;
-  & > a {
-    transition: background 0.5s ease;
-    color:rgba(255, 255, 255, 1);
-  }
-}*/
 
 .top-bar {
       opacity: 0.9;
@@ -314,11 +245,18 @@ h5{
   font-weight: 700;
 }
 
-/*.foo {
-  display: table;
-  width: 100%;
+
+
+table {
+  table-layout: fixed;
 }
-*/
+
+th {
+  border: 1px solid #DDD;
+  padding: 0.25em;
+  overflow: hidden;
+  max-width: 10%;
+}
 
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
@@ -332,3 +270,12 @@ background: -ms-linear-gradient(top, white 0%, gainsboro 100%);
 background: -o-linear-gradient(top, white 0%, gainsboro 100%);
 background: none;
 }
+
+.orbit-container .orbit-prev > span {
+border-right-color: transparent;
+}
+
+/*td:nth-child(2){
+  overflow: hidden;
+  max-width: 100px;
+}*/

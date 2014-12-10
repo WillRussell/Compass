@@ -19,7 +19,7 @@ function scatterplot_function (bigDataArray){
             },
             yAxis: {
                 title: {
-                    text: 'Likelihood of Agreement'
+                    text: 'Agreement Percentage'
                 },
                 min: 0,
                 max: 1,
