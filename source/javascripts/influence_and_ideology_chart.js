@@ -11,10 +11,9 @@ function influence_and_ideology_scatter_function (influence_and_ideology_array){
             title: {
                 text: 'Influence of Money by Political View'
             },
-            xAxis: {
-
+             xAxis: {
                 title: {
-                    text: 'Political View'
+                    text: 'Political Spectrum',
                 },
             },
             yAxis: {
@@ -68,6 +67,7 @@ function influence_and_ideology_scatter_function (influence_and_ideology_array){
                 }
             },
             series: [{
+                showInLegend: false,
                 animation: false,
                 data: influence_and_ideology_array
             }],

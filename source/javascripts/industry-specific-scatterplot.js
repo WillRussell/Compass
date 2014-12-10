@@ -65,6 +65,7 @@ function industry_specific_scatterplot_function (bigDataArray){
                 }
             },
             series: [{
+                showInLegend: false,
                 data: bigDataArray
             }],
         });
