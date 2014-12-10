@@ -1,3 +1,18 @@
+$("form input").keypress(function(ev){
+    if (ev.keyCode == 13) {
+        $("form")[0].submit();
+    }
+});
+
+
+$('.legislator-list').click(function() {
+    $('.j-money').removeClass('hidden');
+    $('.j-vote').removeClass('hidden');
+    $('.section-headline').removeClass('inactive');
+});
+
+
+
 $(document).foundation();
 $(document).ready(function(){$('#myModal').foundation('reveal', 'open')});
 
@@ -70,7 +85,7 @@ $(function () {
                     var phone =  JSON.stringify(data["legislators"][0]["phone"]).slice(1, -1);
                     var ajax_contributions_by_industry = {
                                     type:"GET",
-                                    url:"http://api.civic-compass.org/api/v1/contributions_by_industry.json",
+                                    url:"http://api.civic-compass.org/api/v1/cached_contributions_by_industry.json",
                                     data: { lastname: lastname,
                                               state: state,
                                               title: title,
@@ -78,7 +93,7 @@ $(function () {
                     };
                     var ajax_agreement_by_industry = {
                     type:"GET",
-                    url:"http://api.civic-compass.org/api/v1/agreement_score_by_industry.json",
+                    url:"http://api.civic-compass.org/api/v1/cached_agreement_score_by_industry.json",
                     data: { lastname: lastname,
                               state: state,
                               title: title,
@@ -89,8 +104,8 @@ $(function () {
 
 
                 $(".legislator-profile").append('<h3>' + name + '  ' + '('+party+')' + '</h3>'
-                    +'<div class="large-12 columns"><img id="profile-pic"  src=' + picture_url + ' "></div>'
-                    + '<div class="large-12 columns"><ul class="profile-list"><li><i class="fa fa-map-marker fa-lg"></i> ' + state + "'s " + district + '</li>'
+                    +'<div class="large-4 columns"><img id="profile-pic"  src=' + picture_url + ' "></div>'
+                    + '<div class="large-8 columns"><ul class="profile-list"><li><i class="fa fa-map-marker fa-lg"></i> ' + state + "'s " + district + '</li>'
                    + '<li><i class="fa fa-twitter fa-lg"></i> @' + twitter_id + '</li>'
                  // + '<p>Ideology rank: ' + ideology_rank + '</p>'
                  //  + '<p>Influence rank: '+influence_rank + '</p>'
@@ -182,6 +197,7 @@ $(function () {
                         bigDataArray.push(point_object);
                     }
                         scatterplot_function(bigDataArray)
+
                 });
             }
         })

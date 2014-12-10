@@ -1,7 +1,15 @@
 .section-headline {
 font-family: 'Oswald', sans-serif;
+padding: 20px 0px;
 }
 
+.inactive {
+  color: grey;
+}
+
+.legislator-profile {
+  margin: 0 auto;
+}
 
 .reveal-modal {
   li{
@@ -101,9 +109,9 @@ img {
 #profile-pic {
   display: block;
   margin: 20px auto;
-  height: 170px;
+  height: 137px;
   width: auto;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 #thumbnail {
@@ -116,7 +124,7 @@ img {
 }
 
 .profile-list {
-  text-align: center;
+  text-align: left;
   font-family: open sans, sans-serif;
   margin: 20px auto;
   display: block;
@@ -283,8 +291,10 @@ height: 45px;
 }
 
 ul, ol, dl {
-font-size: 1.3rem;
+font-size: 1.2rem;
 text-align: center;
 }
 
-
+.hidden {
+  display: none;
+}
