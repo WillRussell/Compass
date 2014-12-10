@@ -58,6 +58,7 @@ function scatterplot_function (bigDataArray){
                     },
                 },
                 series: {
+                    showInLegend: false,
                     cursor: 'pointer',
                     animation: false,
                     point: {
@@ -97,7 +98,8 @@ function scatterplot_function (bigDataArray){
             },
             series: [{
                 animation: false,
-                data: bigDataArray
+                data: bigDataArray,
+                color: 'rgba(73,80,88, .5)'
             }],
         });
     });
