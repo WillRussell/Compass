@@ -1,14 +1,23 @@
 /* line 1, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .section-headline {
-  font-family: 'Oswald', sans-serif; }
+  font-family: 'Oswald', sans-serif;
+  padding: 20px 0px; }
 
-/* line 7, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 6, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+.inactive {
+  color: grey; }
+
+/* line 10, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+.legislator-profile {
+  margin: 0 auto; }
+
+/* line 15, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .reveal-modal li {
   list-style: none;
   font-size: 20px;
   text-align: center; }
 
-/* line 14, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 22, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 table.dataTable th,
 table.dataTable td {
   white-space: nowrap; }
@@ -19,65 +28,65 @@ table.dataTable td {
     clear: both;
   }
 */
-/* line 26, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 34, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .page-background {
   /*  background-image: url("images/tiny_grid.png");
   */ }
 
-/* line 30, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 38, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .first-parallax {
   background-color: #d5ded9; }
 
-/* line 34, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 42, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .second-parallax {
   /* background-color:rgb(153,178,183);
   */ }
 
-/* line 38, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 46, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .third-parallax {
   background-color: #d5ded9; }
 
-/* line 42, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 50, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .fourth-parallax {
   /* background-color: rgb(217,206,178);
   */ }
 
-/* line 46, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 54, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .fifth-parallax {
   background-color: #d5ded9; }
 
-/* line 50, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 58, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .section-headline {
   text-align: center; }
 
-/* line 55, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 63, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 #address {
   border-radius: 5px;
   font-family: open sans; }
 
-/* line 61, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 69, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .search-button {
   border-radius: 10px;
   background-color: #539370; }
 
-/* line 66, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 74, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .button:hover, .button:focus {
   background-color: #60997a; }
 
-/* line 70, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 78, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .panel {
   opacity: 0.9;
   display: none; }
 
-/* line 77, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 85, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 ul {
   list-style-type: none; }
 
-/* line 81, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 89, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 li {
   color: black; }
 
-/* line 86, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 94, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .tabs {
   font-family: open sans, sans-serif; }
 
@@ -85,56 +94,56 @@ li {
   border:none;
   border-radius: 10px;
 }*/
-/* line 95, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 103, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 img {
   height: 100px;
   width: auto;
   border-radius: 20px; }
 
-/* line 101, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 109, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 #profile-pic {
   display: block;
   margin: 20px auto;
-  height: 170px;
+  height: 137px;
   width: auto;
-  border-radius: 20px; }
+  border-radius: 25px; }
 
-/* line 109, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 117, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 #thumbnail {
   height: 40px;
   width: auto; }
 
-/* line 114, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 122, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 #thumbnail-link {
   background: transparent; }
 
-/* line 118, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 126, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .profile-list {
-  text-align: center;
+  text-align: left;
   font-family: open sans, sans-serif;
   margin: 20px auto;
   display: block; }
 
-/* line 125, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 133, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .left {
   font-family: open sans; }
 
-/* line 129, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 137, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 h3 {
   text-align: center;
   display: block;
   margin: 15px auto; }
 
-/* line 135, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 143, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .slidernav {
   background-color: transparent;
   color: black; }
 
-/* line 139, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 147, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .orbit-timer {
   display: none; }
 
-/* line 143, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 151, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 #timeline {
   height: 50px; }
 
@@ -203,35 +212,35 @@ h3 {
     color:rgba(255, 255, 255, 1);
   }
 }*/
-/* line 213, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 221, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .top-bar {
   opacity: 0.9;
   background: none; }
 
-/* line 218, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 226, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .form-border {
   background: transparent; }
 
-/* line 222, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 230, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .panel {
   opacity: 0.9; }
 
-/* line 226, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 234, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .panel {
   display: none; }
 
-/* line 231, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 239, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .sub-nav dd.active a {
   background: #d5ded9; }
 
-/* line 235, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 243, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 [data-magellan-expedition], [data-magellan-expedition-clone] {
   background: #f7f7f7;
   z-index: 50;
   min-width: 100%;
   padding: 1px; }
 
-/* line 243, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 251, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .top-bar .name h1 a {
   font-weight: bold;
   font-size: 50px;
@@ -241,37 +250,41 @@ h3 {
   display: block;
   padding: 0 15px; }
 
-/* line 253, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 261, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .top-bar-section .has-form {
   background: none;
   padding: 0 15px;
   height: 45px; }
 
-/* line 261, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 269, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .sub-nav {
   margin: 0 auto !important;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content; }
 
-/* line 268, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 276, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .magellan-nav {
   right: 0; }
 
-/* line 272, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 280, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .contain-to-grid {
   background-image: url("images/simple_dashed.png");
   padding: 20px; }
 
-/* line 277, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 285, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .right.li {
   background-color: transparent; }
 
-/* line 281, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 289, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 .top-bar.expanded .title-area {
   background: none; }
 
-/* line 285, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+/* line 293, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 ul, ol, dl {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center; }
+
+/* line 298, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+.hidden {
+  display: none; }
