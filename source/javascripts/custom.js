@@ -1,6 +1,7 @@
 $("form input").keypress(function(ev){
     if (ev.keyCode == 13) {
-        $("form")[0].submit();
+        event.preventDefault();
+        $('.search-button').click();
     }
 });
 
@@ -8,6 +9,7 @@ $("form input").keypress(function(ev){
 $('.legislator-list').click(function() {
     $('.j-money').removeClass('hidden');
     $('.j-vote').removeClass('hidden');
+    $('.industry-specific-placeholder').removeClass('hidden');
     $('.section-headline').removeClass('inactive');
 });
 
