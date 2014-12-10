@@ -50,10 +50,13 @@ table.dataTable th,
 
 #address {
   border-radius: 5px;
+    font-family: open sans;
+
 }
 
 .search-button {
   border-radius: 10px;
+  background-color: rgb(83,147,112);
 }
 
 .panel {
@@ -72,6 +75,14 @@ li {
 }
 
 
+.tabs {
+    font-family: open sans, sans-serif;
+}
+
+/*.paginate-button {
+  border:none;
+  border-radius: 10px;
+}*/
 
 img {
     height: 100px;
@@ -98,8 +109,13 @@ img {
 
 .profile-list {
   text-align: center;
+  font-family: open sans, sans-serif;
   margin: 15px auto;
   display: block;
+}
+
+.left {
+  font-family: open sans;
 }
 
 h3 {
@@ -202,3 +218,59 @@ h3 {
 .panel {
     display:none;
 };
+
+
+ .sub-nav dd.active a{
+   background:rgb(213,222,217);
+}
+
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+  background: rgb(247,247,247);
+  z-index: 50;
+  min-width: 100%;
+  padding: 1px;
+}
+
+
+.top-bar .name h1 a {
+font-weight: bold;
+font-size: 50px;
+color: white;
+font-family: 'Cabin Sketch', cursive;
+width: 75%;
+display: block;
+padding: 0 15px;
+}
+
+.top-bar-section .has-form {
+background: none;
+padding: 0 15px;
+height: 45px;
+}
+
+
+
+.sub-nav{
+    margin: 0 auto !important;
+    width: -webkit-fit-content;
+       width: -moz-fit-content;
+            width: fit-content;
+    }
+
+.magellan-nav {
+  right: 0;
+}
+
+.contain-to-grid {
+  background-image: url("images/simple_dashed.png");
+  padding: 20px;
+}
+
+.right.li {
+  background-color: transparent;
+}
+
+.top-bar.expanded .title-area {
+ background: none;
+}
+
