@@ -2,10 +2,12 @@ function topContributors_function (contributor_data){
     var contributors = contributor_data["legislators"][0]["top_contributors"];
     var bigDataArray = []
     var count = []
+    var contribArray = []
     for (var i = 0; i < contributors.length; i++){
         var smallDataArray = []
         var contributor_instance = new Object();
         contributor_instance.name = contributors[i].name;
+        contribArray.push(contributor_instance.name);
         contributor_instance.count = contributors[i].total_count;
         contributor_instance.totalAmount = contributors[i].total_amount;
         contributor_instance.totalAmount = parseInt(contributor_instance.totalAmount);
@@ -14,49 +16,75 @@ function topContributors_function (contributor_data){
         bigDataArray.push(smallDataArray);
     }
 
-    $(function () {
-        $('#slider-one').highcharts({
+var contributors = Object.keys(contributors);
+debugger;
+
+  $(function () {
+        // Set up the chart
+        var chart = new Highcharts.Chart({
             chart: {
-                type: 'pie',
+                renderTo: 'slider-one',
+                type: 'column',
+                backgroundColor: 'transparent',
+                margin: 75,
                 options3d: {
                     enabled: true,
-                    alpha: 45,
-                    beta: 0
-                },
-                backgroundColor: 'transparent',
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false
-
+                    alpha: 10,
+                    beta: 15,
+                    depth: 50,
+                    viewDistance: 25
+                }
             },
             title: {
-                text: 'Top contributors'
+                text: 'Top Contributors'
             },
-            tooltip: {
-                pointFormat: '{series.name}:<b>${point.y:.1f}</b>'
+            subtitle: {
+                text: ''
             },
             plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    depth: 35,
-                    dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b>: ${point.y:.1f}',
-                        style: {
-                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                        }
-                    }
+                column: {
+                    depth: 25
+                }
+            },
+
+            xAxis: {
+                categories: contribArray,
+                labels: {
+                    maxStaggerLines: 1,
                 }
             },
             series: [{
-                type: 'pie',
                 name: 'Contribution amount',
+                showInLegend: false,
                 data: bigDataArray,
                 animation: false,
             }]
-        });
-    });
 
+        });
+
+        function showValues() {
+            $('#R0-value').html(chart.options.chart.options3d.alpha);
+            $('#R1-value').html(chart.options.chart.options3d.beta);
+        }
+
+        // Activate the sliders
+        $('#R0').on('change', function () {
+            chart.options.chart.options3d.alpha = this.value;
+            showValues();
+            chart.redraw(false);
+        });
+        $('#R1').on('change', function () {
+            chart.options.chart.options3d.beta = this.value;
+            showValues();
+            chart.redraw(false);
+        });
+
+        showValues();
+    });
     $(".parallax-two").resize();
 };
+
+
+
+
+

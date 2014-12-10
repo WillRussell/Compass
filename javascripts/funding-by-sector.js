@@ -2,7 +2,8 @@
 
 function sector_function (data){
     var contributions_object = data[0].legislators[0].contributions_by_industry;
-    var sorted_contributions_object = function filter(data) {
+
+    function sorted_contributions_object (data) {
       return Object.keys(data).map(function (k) {
         return { key: k, value: data[k] };
       }).sort(function (kv1, kv2) {
@@ -12,6 +13,8 @@ function sector_function (data){
         return obj;
       }, {});
     }
+
+    contributions_object = sorted_contributions_object(contributions_object);
     var industries = Object.keys(contributions_object);
     var amounts = $.map(contributions_object,function(v){
      return v;

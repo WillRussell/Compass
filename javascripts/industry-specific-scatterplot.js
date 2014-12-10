@@ -19,7 +19,7 @@ function industry_specific_scatterplot_function (bigDataArray){
             },
             yAxis: {
                 title: {
-                    text: 'Liklihood of Agreement'
+                    text: 'Agreement Percentage'
                 },
                 min: 0,
                 max: 1,
