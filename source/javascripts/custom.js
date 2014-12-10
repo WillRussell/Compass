@@ -5,13 +5,13 @@ $(document).ready(function(){$('#myModal').foundation('reveal', 'open')});
 
 
 // ---Navbar fade ---
-jQuery(document).on("scroll",function(){
-    if($(document).scrollTop()>60){
-        $(".contain-to-grid").addClass("undocked");
-    } else{
-        $(".contain-to-grid").removeClass("undocked");
-    }
-});
+// jQuery(document).on("scroll",function(){
+//     if($(document).scrollTop()>60){
+//         $(".contain-to-grid").addClass("undocked");
+//     } else{
+//         $(".contain-to-grid").removeClass("undocked");
+//     }
+// });
 
 
 // ---Legislators select slidedown panel ---
@@ -37,7 +37,7 @@ $(function() {
                 }
             }
         });
-         $('.panel').slideDown(400);
+         $('.panel').show(400);
     });
 })
 
@@ -85,14 +85,17 @@ $(function () {
                     },
                     };
 
-                $(".legislator-profile").append('<img id="profile-pic" src=' + picture_url + ' ">'
-                    +'<h3>' + name + '  ' + '('+party+')' + '</h3>'
-                    + '<ul class="profile-list"><li><i class="fa fa-map-marker fa-lg"></i> ' + state + "'s " + district + '</li>'
+
+
+
+                $(".legislator-profile").append('<h3>' + name + '  ' + '('+party+')' + '</h3>'
+                    +'<div class="large-12 columns"><img id="profile-pic"  src=' + picture_url + ' "></div>'
+                    + '<div class="large-12 columns"><ul class="profile-list"><li><i class="fa fa-map-marker fa-lg"></i> ' + state + "'s " + district + '</li>'
                    + '<li><i class="fa fa-twitter fa-lg"></i> @' + twitter_id + '</li>'
                  // + '<p>Ideology rank: ' + ideology_rank + '</p>'
                  //  + '<p>Influence rank: '+influence_rank + '</p>'
                   +'<li><i class="fa fa-phone fa-lg"></i> ' + phone + '</li>'
-                  +'<li><i class="fa fa-home fa-lg"></i> ' + website + '</li></ul>');
+                  +'<li><i class="fa fa-home fa-lg"></i> ' + website + '</li></ul></div>');
 
                 $("#thumbnail").attr('src',picture_url);
 
@@ -184,3 +187,5 @@ $(function () {
         })
     });
 });
+
+

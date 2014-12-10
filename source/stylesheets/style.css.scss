@@ -23,6 +23,10 @@ table.dataTable th,
   }
 */
 
+.page-background {
+/*  background-image: url("images/tiny_grid.png");
+*/}
+
  .first-parallax {
  background-color:  rgb(213,222,217);
  }
@@ -59,6 +63,10 @@ table.dataTable th,
   background-color: rgb(83,147,112);
 }
 
+.button:hover, .button:focus {
+background-color: rgb(96,153,122);
+}
+
 .panel {
     opacity: 0.9;
     display:none;
@@ -87,15 +95,15 @@ li {
 img {
     height: 100px;
     width: auto;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 #profile-pic {
   display: block;
-  margin: 15px auto;
-  height: 150px;
+  margin: 20px auto;
+  height: 170px;
   width: auto;
-  border-radius: 75px;
+  border-radius: 20px;
 }
 
 #thumbnail {
@@ -110,7 +118,7 @@ img {
 .profile-list {
   text-align: center;
   font-family: open sans, sans-serif;
-  margin: 15px auto;
+  margin: 20px auto;
   display: block;
 }
 
@@ -273,4 +281,10 @@ height: 45px;
 .top-bar.expanded .title-area {
  background: none;
 }
+
+ul, ol, dl {
+font-size: 1.3rem;
+text-align: center;
+}
+
 
