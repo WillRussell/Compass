@@ -43,7 +43,7 @@ function timeline_function (timeline_data) {
         }],
         tooltip: {
             formatter: function() {
-                return this.point.x + ": " + this.point.name + ' for ' + this.point.state + '';
+                return this.point.x + ": " + this.point.name + '';
             }
         },
     });

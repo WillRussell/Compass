@@ -25,7 +25,7 @@ function votingRecord_function (voting_data){
             { vote: "Vote" }
         ]
     });
-       $(".parallax-three").resize();
+           // $(".parallax-three").resize();
 };
 
 // if ( $.fn.dataTable.isDataTable( '#voting-record' ) ) {

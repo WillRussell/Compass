@@ -7601,3 +7601,35 @@ header {
     padding-right: 0.9375rem;
     width: 50%;
     float: left; }
+
+/* line 33, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/app.css.scss */
+body {
+  font-family: 'Oswald', sans-serif; }
+
+/* line 37, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/app.css.scss */
+ul {
+  font-family: open sans, sans-serif; }
+
+/* line 41, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/app.css.scss */
+.left {
+  font-family: open sans, sans-serif; }
+
+/* line 45, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/app.css.scss */
+table {
+  font-family: open sans, sans-serif; }
+
+/* line 49, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/app.css.scss */
+h3 {
+  font-family: open sans, sans-serif; }
+
+/* line 53, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/app.css.scss */
+a {
+  font-family: open sans, sans-serif; }
+
+/* line 57, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/app.css.scss */
+.title-area {
+  font-family: 'Oswald', sans-serif; }
+
+/* line 61, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/app.css.scss */
+.navbar {
+  background-color: green; }
