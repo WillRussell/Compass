@@ -9,6 +9,7 @@ $("form input").keypress(function(ev){
 $('.legislator-list').click(function() {
     $('.j-money').removeClass('hidden');
     $('.j-vote').removeClass('hidden');
+    $('footer').removeClass('hidden');
     $('.industry-specific-placeholder').removeClass('hidden');
     $('.section-headline').removeClass('inactive');
 });
