@@ -54,6 +54,11 @@ function sector_function (data){
                     maxStaggerLines: 1,
                 }
             },
+            yAxis: {
+                title: {
+                    text: 'Contribution Amount',
+                }
+            },
             series: [{
                 name: "Contribution",
                 color: 'rgb(135,178,163)',
