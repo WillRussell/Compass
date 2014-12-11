@@ -1,5 +1,4 @@
-function industry_specific_scatterplot_function (bigDataArray){
-
+function industry_specific_scatterplot_function (bigDataArray, contributor_category){
         $(function () {
         $('#industry_specific_scatterplot').highcharts({
             chart: {
@@ -8,7 +7,10 @@ function industry_specific_scatterplot_function (bigDataArray){
                 zoomType: 'xy',
             },
             title: {
-                text: 'Industry Specific Scores'
+                text: contributor_category
+            },
+            subtitle: {
+                text: 'For all congressional legislators'
             },
             xAxis: {
 
@@ -19,7 +21,7 @@ function industry_specific_scatterplot_function (bigDataArray){
             },
             yAxis: {
                 title: {
-                    text: 'Agreement Percentage'
+                    text: 'Alignment Score'
                 },
                 min: 0,
                 max: 1,
@@ -64,7 +66,9 @@ function industry_specific_scatterplot_function (bigDataArray){
                     }
                 }
             },
+            credits: { enabled: false },
             series: [{
+                credits: { enabled: false },
                 showInLegend: false,
                 data: bigDataArray
             }],

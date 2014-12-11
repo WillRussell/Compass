@@ -56,6 +56,7 @@ function sector_function (data){
             },
             series: [{
                 name: "Contribution",
+                color: 'rgb(74,132,100)',
                 showInLegend: false,
                 data: amounts,
                 animation: false,

@@ -8,7 +8,10 @@ function scatterplot_function (bigDataArray){
                 zoomType: 'xy',
             },
             title: {
-                text: 'Industry Scores'
+                text: 'Contributor Categories'
+            },
+            subtitle: {
+                text: 'For your legislator'
             },
             xAxis: {
 
@@ -19,7 +22,7 @@ function scatterplot_function (bigDataArray){
             },
             yAxis: {
                 title: {
-                    text: 'Agreement Percentage'
+                    text: 'Alignment Score'
                 },
                 min: 0,
                 max: 1,
@@ -70,13 +73,14 @@ function scatterplot_function (bigDataArray){
                                     url:"http://api.civic-compass.org/api/v1/industry_scores.json",
                                     data: {   industry: this.name,
                                     },
-                                    success:function(data){
+                                    contributor_category: this.name,
+                                    success:function(data, contributor_category){
                                         var industry_scores = data["legislators"][0]["industry_scores"];
                                         var bigDataArray = [];
                                         for (i = 0; i < industry_scores.length; i++) {
                                             var point_object = new Object();
                                             point_object.x = industry_scores[i]["contributions_to_industry"];
-                                            point_object.y = industry_scores[i]["agreement_score_with_industry"];
+                                            point_object.y = parseFloat(industry_scores[i]["agreement_score_with_industry"].toFixed(4));
                                             point_object.name = industry_scores[i]["firstname"] + " " + industry_scores[i]["lastname"];
                                             point_object.title = industry_scores[i]["title"];
                                             point_object.state = industry_scores[i]["state"];
@@ -88,7 +92,7 @@ function scatterplot_function (bigDataArray){
                                             }
                                             bigDataArray.push(point_object);
                                         }
-                                        industry_specific_scatterplot_function (bigDataArray)
+                                        industry_specific_scatterplot_function (bigDataArray, this.contributor_category)
                                     }
                                 })
                             }
@@ -96,6 +100,7 @@ function scatterplot_function (bigDataArray){
                     }
                 }
             },
+            credits: { enabled: false },
             series: [{
                 animation: false,
                 data: bigDataArray,
