@@ -17,7 +17,6 @@ function topContributors_function (contributor_data){
     }
 
 var contributors = Object.keys(contributors);
-debugger;
 
   $(function () {
         // Set up the chart
@@ -43,6 +42,7 @@ debugger;
             },
             plotOptions: {
                 column: {
+                    colors: ['green'],
                     depth: 25
                 }
             },
@@ -53,8 +53,10 @@ debugger;
                     maxStaggerLines: 1,
                 }
             },
+            credits: { enabled: false },
             series: [{
                 name: 'Contribution amount',
+                color: 'rgb(74,132,100)',
                 showInLegend: false,
                 data: bigDataArray,
                 animation: false,

@@ -35,10 +35,21 @@ function timeline_function (timeline_data) {
             },
             labels: { enabled: false }
         },
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    // enabled: true,
+                    // format: '{point.name}',
+                    // crop: false,
+                    // overflow: "none",
+                }
+            }
+        },
         legend: { enabled: false },
         exporting: { enabled: false },
         credits: { enabled: false },
         series: [{
+            color: 'rgb(74,132,100)',
             data: timeline_array
         }],
         tooltip: {

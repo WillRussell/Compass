@@ -9,16 +9,24 @@ function influence_and_ideology_scatter_function (influence_and_ideology_array){
                 animation: false,
             },
             title: {
-                text: 'Influence of Money by Political View'
+                text: 'Agreement Score and Political View'
             },
              xAxis: {
                 title: {
+                    align: 'low',
                     text: 'Political Spectrum',
+                },
+                tickWidth: 0,
+                labels: {
+                                enabled: false
+                            },
+                title: {
+                    text: 'Liberal-Conservative Spectrum',
                 },
             },
             yAxis: {
                 title: {
-                    text: 'Influence of Money'
+                    text: 'Indexed Agreement Score'
                 },
                 min: 0,
             },
@@ -66,6 +74,7 @@ function influence_and_ideology_scatter_function (influence_and_ideology_array){
                     }
                 }
             },
+            credits: { enabled: false },
             series: [{
                 showInLegend: false,
                 animation: false,
