@@ -53,6 +53,11 @@ var contributors = Object.keys(contributors);
                     maxStaggerLines: 1,
                 }
             },
+            yAxis: {
+                title: {
+                    text: 'Contribution Amount',
+                }
+            },
             credits: { enabled: false },
             series: [{
                 name: 'Contribution amount',
