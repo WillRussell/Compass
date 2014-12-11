@@ -68,6 +68,7 @@ function scatterplot_function (bigDataArray){
                         events: {
                             click: function(event) {
                                 $('.industry-specific-placeholder').addClass('hidden');
+                                $('.industry-specific-scatterplot').removeClass('hidden');
                                 $.ajax({
                                     type:"GET",
                                     url:"http://api.civic-compass.org/api/v1/industry_scores.json",

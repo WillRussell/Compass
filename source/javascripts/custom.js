@@ -15,6 +15,19 @@ $('.legislator-list').click(function() {
 });
 
 
+$('#thumbnail').click(function() {
+
+    $('.industry-specific-scatterplot').addClass('hidden');
+
+    $('.panel').show(400);
+
+
+    // $('#industry_specific_scatterplot').addClass('hidden');
+
+
+});
+
+
 
 $(document).foundation();
 $(document).ready(function(){$('#myModal').foundation('reveal', 'open')});
