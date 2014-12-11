@@ -16,7 +16,7 @@ function votingRecord_function (voting_data){
     $('#voting-record').dataTable({
        destroy: true,
         "order": [[ 0, "desc" ]],
-         "iDisplayLength": 15,
+         "iDisplayLength": 8,
         "bLengthChange": false,
          "data": bigDataArray,
             "columns": [
