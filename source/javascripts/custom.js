@@ -106,8 +106,8 @@ $(function () {
 
 
                 $(".legislator-profile").append('<h3>' + name + '  ' + '('+party+')' + '</h3>'
-                    +'<div class="large-4 columns"><img id="profile-pic"  src=' + picture_url + ' "></div>'
-                    + '<div class="large-8 columns"><ul class="profile-list"><li><i class="fa fa-map-marker fa-lg"></i> ' + state + "'s " + district + '</li>'
+                    +'<div class="large-12 columns"><img id="profile-pic"  src=' + picture_url + ' "></div>'
+                    + '<div class="large-12 columns"><ul class="profile-list"><li><i class="fa fa-map-marker fa-lg"></i> ' + state + "'s " + district + '</li>'
                    + '<li><i class="fa fa-twitter fa-lg"></i> @' + twitter_id + '</li>'
                  // + '<p>Ideology rank: ' + ideology_rank + '</p>'
                  //  + '<p>Influence rank: '+influence_rank + '</p>'

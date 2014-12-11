@@ -56,7 +56,7 @@ var contributors = Object.keys(contributors);
             credits: { enabled: false },
             series: [{
                 name: 'Contribution amount',
-                color: 'rgb(74,132,100)',
+                color: 'rgb(135,178,163)',
                 showInLegend: false,
                 data: bigDataArray,
                 animation: false,

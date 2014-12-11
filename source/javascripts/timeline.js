@@ -26,7 +26,6 @@ function timeline_function (timeline_data) {
             text: ''
         },
         xAxis: {
-            data: [1990, 1991, 1992],
             labels: { enabled: false },
         },
         yAxis: {
@@ -49,7 +48,7 @@ function timeline_function (timeline_data) {
         exporting: { enabled: false },
         credits: { enabled: false },
         series: [{
-            color: 'rgb(74,132,100)',
+            color: 'rgb(135,178,163)',
             data: timeline_array
         }],
         tooltip: {

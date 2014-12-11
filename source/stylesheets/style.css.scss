@@ -107,12 +107,17 @@ img {
   width: 60px;
 }*/
 
+.logo {
+  font-size: 10px;
+}
+
 #profile-pic {
   display: block;
-  margin: 20px auto;
-  height: 137px;
+  margin: 10px auto;
+/*  height: 137px;*/
+  height: 200px;
   width: auto;
-  border-radius: 50px;
+  border-radius: 50%;
 }
 
 #thumbnail {
@@ -184,9 +189,19 @@ h3 {
 }
 
 
-.top-bar .name h1 a {
+.top-bar  h1 a {
 font-weight: bold;
 font-size: 50px;
+color: white;
+font-family: 'Cabin Sketch', cursive;
+width: 75%;
+display: block;
+padding: 0 15px;
+}
+
+.left.name h1{
+  font-weight: bold;
+font-size: 40px;
 color: white;
 font-family: 'Cabin Sketch', cursive;
 width: 75%;
@@ -279,3 +294,53 @@ border-right-color: transparent;
   overflow: hidden;
   max-width: 100px;
 }*/
+
+
+.full-width {
+  max-width: 1400px;
+}
+
+.footer {
+  background-color: rgb(247,247,247);
+  padding: 2rem 4rem;
+  text-align: center;
+  color: black;
+}
+.footer i {
+  font-size: 100px;
+}
+
+.footer h4 {
+  color: black;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  margin-bottom: 10px;
+}
+.footer p, .footer a {
+  font-weight: 300;
+  font-size: .8em;
+  color: black;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .footer .columns:nth-child(n+2) {
+    border-left: 1px solid #b3b3b3;
+    min-height: 280px;
+  }
+}
+.footer-links {
+  list-style-type: none;
+}
+.footer-links li {
+  margin-top: .5em;
+}
+
+.fi-torso{
+  color: white;
+}
+
+p {
+  padding: 15px;
+}
