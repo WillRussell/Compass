@@ -59,6 +59,7 @@ function sector_function (data){
                     text: 'Contribution Amount',
                 }
             },
+            credits: { enabled: false },
             series: [{
                 name: "Contribution",
                 color: 'rgb(135,178,163)',

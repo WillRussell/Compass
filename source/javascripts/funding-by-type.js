@@ -23,6 +23,7 @@ function type_function (type_data){
                 depth: 45
             }
         },
+        credits: { enabled: false },
         series: [{
             name: 'Contribution',
             animation: false,
