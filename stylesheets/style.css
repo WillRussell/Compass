@@ -326,3 +326,11 @@ th {
 /* line 340, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
 p {
   padding: 15px; }
+
+/* line 344, /Users/Will/TIY/middleman-zurb-foundation/source/stylesheets/style.css.scss */
+footer p, .footer a {
+  font-weight: 300;
+  font-size: .8em;
+  padding: inherit;
+  padding-top: 10px;
+  color: black; }
