@@ -15,7 +15,7 @@ function type_function (type_data){
             text: 'Funding by Type'
         },
         subtitle: {
-            text: '3D donut in Highcharts'
+            text: ''
         },
         plotOptions: {
             pie: {
