@@ -12,6 +12,7 @@ $('.legislator-list').click(function() {
     // $('footer').removeClass('hidden');
     $('.industry-specific-placeholder').removeClass('hidden');
     $('.section-headline').removeClass('inactive');
+    $('#instructions').hide();
 });
 
 
